@@ -3,36 +3,20 @@
  "updated": "Nov 08, 2026",
  "trades": [
   {
-   "t": "PG",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Oct 23",
-   "iso": "2026-10-23",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "PG",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Oct 23",
-   "iso": "2026-10-23",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "T",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Oct 15",
-   "iso": "2026-10-15",
-   "who": "Rep. David J. Taylor (OH-2)"
-  },
-  {
-   "t": "V",
+   "t": "DIS",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
-   "date": "Oct 15",
-   "iso": "2026-10-15",
-   "who": "Rep. David J. Taylor (OH-2)"
+   "date": "Oct 28",
+   "iso": "2026-10-28",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
+   "t": "PG",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 23",
+   "iso": "2026-10-23",
+   "who": "Rep. Maria Elvira Salazar (FL-27)"
   },
   {
    "t": "HD",
@@ -51,6 +35,38 @@
    "who": "Rep. Pete Sessions (TX-17)"
   },
   {
+   "t": "T",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 15",
+   "iso": "2026-10-15",
+   "who": "Rep. David J. Taylor (OH-2)"
+  },
+  {
+   "t": "V",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 15",
+   "iso": "2026-10-15",
+   "who": "Rep. David J. Taylor (OH-2)"
+  },
+  {
+   "t": "PG",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 12",
+   "iso": "2026-10-12",
+   "who": "Rep. David J. Taylor (OH-2)"
+  },
+  {
+   "t": "T",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 9",
+   "iso": "2026-10-09",
+   "who": "Rep. David J. Taylor (OH-2)"
+  },
+  {
    "t": "PG",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
@@ -59,12 +75,12 @@
    "who": "Rep. Pete Sessions (TX-17)"
   },
   {
-   "t": "TJX",
+   "t": "HD",
    "side": "Sell",
-   "size": "$15,001\u2013$50,000",
-   "date": "Oct 2",
-   "iso": "2026-10-02",
-   "who": "Rep. Pete Sessions (TX-17)"
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 8",
+   "iso": "2026-10-08",
+   "who": "Rep. Rick Larsen (WA-2)"
   },
   {
    "t": "TJX",
@@ -83,108 +99,12 @@
    "who": "Rep. Pete Sessions (TX-17)"
   },
   {
-   "t": "DIS",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Oct 28",
-   "iso": "2026-10-28",
-   "who": "Rep. Pete Sessions (TX-17)"
-  },
-  {
-   "t": "NOKBF",
-   "side": "Buy",
-   "size": "$15,001\u2013$50,000",
-   "date": "Sep 18",
-   "iso": "2026-09-18",
-   "who": "Rep. Laurel Lee (FL-15)"
-  },
-  {
-   "t": "T",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Oct 9",
-   "iso": "2026-10-09",
-   "who": "Rep. David J. Taylor (OH-2)"
-  },
-  {
-   "t": "PG",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Oct 12",
-   "iso": "2026-10-12",
-   "who": "Rep. David J. Taylor (OH-2)"
-  },
-  {
-   "t": "HD",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 23",
-   "iso": "2026-09-23",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "MRSH",
-   "side": "Sell",
-   "size": "$50,001\u2013$100,000",
-   "date": "Sep 17",
-   "iso": "2026-09-17",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "MRSH",
-   "side": "Sell",
-   "size": "$50,001\u2013$100,000",
-   "date": "Sep 23",
-   "iso": "2026-09-23",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
    "t": "ITT",
    "side": "Sell",
    "size": "$15,001\u2013$50,000",
    "date": "Sep 29",
    "iso": "2026-09-29",
    "who": "Rep. Gilbert Cisneros (CA-31)"
-  },
-  {
-   "t": "ITT",
-   "side": "Sell",
-   "size": "$15,001\u2013$50,000",
-   "date": "Sep 21",
-   "iso": "2026-09-21",
-   "who": "Rep. Gilbert Cisneros (CA-31)"
-  },
-  {
-   "t": "PTC",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 17",
-   "iso": "2026-09-17",
-   "who": "Rep. Gilbert Cisneros (CA-31)"
-  },
-  {
-   "t": "HD",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Oct 8",
-   "iso": "2026-10-08",
-   "who": "Rep. Rick Larsen (WA-2)"
-  },
-  {
-   "t": "NG",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 14",
-   "iso": "2026-09-14",
-   "who": "Rep. Lisa McClain (MI-9)"
-  },
-  {
-   "t": "RIG",
-   "side": "Buy",
-   "size": "$15,001\u2013$50,000",
-   "date": "Sep 14",
-   "iso": "2026-09-14",
-   "who": "Rep. Lisa McClain (MI-9)"
   },
   {
    "t": "BA",
@@ -212,11 +132,155 @@
   },
   {
    "t": "HD",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 23",
+   "iso": "2026-09-23",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "MRSH",
+   "side": "Sell",
+   "size": "$50,001\u2013$100,000",
+   "date": "Sep 23",
+   "iso": "2026-09-23",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "HD",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 22",
+   "iso": "2026-09-22",
+   "who": "Rep. David J. Taylor (OH-2)"
+  },
+  {
+   "t": "ITT",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 21",
+   "iso": "2026-09-21",
+   "who": "Rep. Gilbert Cisneros (CA-31)"
+  },
+  {
+   "t": "NOKBF",
+   "side": "Buy",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 18",
+   "iso": "2026-09-18",
+   "who": "Rep. Laurel Lee (FL-15)"
+  },
+  {
+   "t": "MRSH",
+   "side": "Sell",
+   "size": "$50,001\u2013$100,000",
+   "date": "Sep 17",
+   "iso": "2026-09-17",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "PTC",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 17",
+   "iso": "2026-09-17",
+   "who": "Rep. Gilbert Cisneros (CA-31)"
+  },
+  {
+   "t": "HD",
    "side": "Buy",
    "size": "$1,001\u2013$15,000",
    "date": "Sep 17",
    "iso": "2026-09-17",
    "who": "Rep. Lloyd Doggett (TX-37)"
+  },
+  {
+   "t": "CNP",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 15",
+   "iso": "2026-09-15",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "STE",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 15",
+   "iso": "2026-09-15",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "TJX",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 15",
+   "iso": "2026-09-15",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "NG",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 14",
+   "iso": "2026-09-14",
+   "who": "Rep. Lisa McClain (MI-9)"
+  },
+  {
+   "t": "RIG",
+   "side": "Buy",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 14",
+   "iso": "2026-09-14",
+   "who": "Rep. Lisa McClain (MI-9)"
+  },
+  {
+   "t": "HD",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 14",
+   "iso": "2026-09-14",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "HD",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 14",
+   "iso": "2026-09-14",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "MRSH",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 14",
+   "iso": "2026-09-14",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "HD",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 10",
+   "iso": "2026-09-10",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "MRSH",
+   "side": "Sell",
+   "size": "$100,001\u2013$250,000",
+   "date": "Sep 9",
+   "iso": "2026-09-09",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "PTC",
+   "side": "Sell",
+   "size": "$50,001\u2013$100,000",
+   "date": "Sep 9",
+   "iso": "2026-09-09",
+   "who": "Rep. Kevin Hern (OK-1)"
   },
   {
    "t": "GS",
@@ -227,27 +291,35 @@
    "who": "Rep. Michael Rulli (OH-6)"
   },
   {
-   "t": "HD",
-   "side": "Buy",
+   "t": "VUZI",
+   "side": "Sell",
    "size": "$1,001\u2013$15,000",
-   "date": "Sep 22",
-   "iso": "2026-09-22",
-   "who": "Rep. David J. Taylor (OH-2)"
+   "date": "Sep 3",
+   "iso": "2026-09-03",
+   "who": "Rep. Kevin Hern (OK-1)"
   },
   {
    "t": "HD",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 22",
-   "iso": "2026-09-22",
-   "who": "Rep. David J. Taylor (OH-2)"
-  },
-  {
-   "t": "CNP",
    "side": "Sell",
    "size": "$15,001\u2013$50,000",
-   "date": "Sep 15",
-   "iso": "2026-09-15",
+   "date": "Sep 2",
+   "iso": "2026-09-02",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "MRSH",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 2",
+   "iso": "2026-09-02",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "TJX",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 2",
+   "iso": "2026-09-02",
    "who": "Rep. Kevin Hern (OK-1)"
   },
   {
@@ -267,6 +339,30 @@
    "who": "Rep. Kevin Hern (OK-1)"
   },
   {
+   "t": "HD",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Aug 31",
+   "iso": "2026-08-31",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "PTC",
+   "side": "Sell",
+   "size": "$50,001\u2013$100,000",
+   "date": "Aug 31",
+   "iso": "2026-08-31",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "TJX",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Aug 31",
+   "iso": "2026-08-31",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
    "t": "CSX",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
@@ -278,120 +374,8 @@
    "t": "HD",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
-   "date": "Sep 14",
-   "iso": "2026-09-14",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "HD",
-   "side": "Sell",
-   "size": "$15,001\u2013$50,000",
-   "date": "Sep 10",
-   "iso": "2026-09-10",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "HD",
-   "side": "Sell",
-   "size": "$15,001\u2013$50,000",
-   "date": "Sep 14",
-   "iso": "2026-09-14",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "HD",
-   "side": "Sell",
-   "size": "$15,001\u2013$50,000",
-   "date": "Sep 2",
-   "iso": "2026-09-02",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "HD",
-   "side": "Sell",
-   "size": "$15,001\u2013$50,000",
-   "date": "Aug 31",
-   "iso": "2026-08-31",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "HD",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
    "date": "Aug 27",
    "iso": "2026-08-27",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "MRSH",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 2",
-   "iso": "2026-09-02",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "MRSH",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 14",
-   "iso": "2026-09-14",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "MRSH",
-   "side": "Sell",
-   "size": "$100,001\u2013$250,000",
-   "date": "Sep 9",
-   "iso": "2026-09-09",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "PTC",
-   "side": "Sell",
-   "size": "$50,001\u2013$100,000",
-   "date": "Aug 31",
-   "iso": "2026-08-31",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "PTC",
-   "side": "Sell",
-   "size": "$50,001\u2013$100,000",
-   "date": "Sep 9",
-   "iso": "2026-09-09",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "STE",
-   "side": "Sell",
-   "size": "$15,001\u2013$50,000",
-   "date": "Sep 15",
-   "iso": "2026-09-15",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "TJX",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 15",
-   "iso": "2026-09-15",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "TJX",
-   "side": "Sell",
-   "size": "$15,001\u2013$50,000",
-   "date": "Sep 2",
-   "iso": "2026-09-02",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "TJX",
-   "side": "Sell",
-   "size": "$15,001\u2013$50,000",
-   "date": "Aug 31",
-   "iso": "2026-08-31",
    "who": "Rep. Kevin Hern (OK-1)"
   },
   {
@@ -401,62 +385,6 @@
    "date": "Aug 27",
    "iso": "2026-08-27",
    "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "VUZI",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 3",
-   "iso": "2026-09-03",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "VUZI",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 3",
-   "iso": "2026-09-03",
-   "who": "Rep. Kevin Hern (OK-1)"
-  },
-  {
-   "t": "PEP",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Aug 26",
-   "iso": "2026-08-26",
-   "who": "Rep. Scott Scott Franklin (FL-18)"
-  },
-  {
-   "t": "PEP",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Aug 26",
-   "iso": "2026-08-26",
-   "who": "Rep. Scott Scott Franklin (FL-18)"
-  },
-  {
-   "t": "KMX",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Aug 19",
-   "iso": "2026-08-19",
-   "who": "Rep. Gilbert Cisneros (CA-31)"
-  },
-  {
-   "t": "COHR",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Aug 18",
-   "iso": "2026-08-18",
-   "who": "Rep. Gilbert Cisneros (CA-31)"
-  },
-  {
-   "t": "GS",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Aug 26",
-   "iso": "2026-08-26",
-   "who": "Rep. Gilbert Cisneros (CA-31)"
   },
   {
    "t": "NKE",
@@ -464,6 +392,22 @@
    "size": "$15,001\u2013$50,000",
    "date": "Aug 27",
    "iso": "2026-08-27",
+   "who": "Rep. Gilbert Cisneros (CA-31)"
+  },
+  {
+   "t": "PEP",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Aug 26",
+   "iso": "2026-08-26",
+   "who": "Rep. Scott Scott Franklin (FL-18)"
+  },
+  {
+   "t": "GS",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Aug 26",
+   "iso": "2026-08-26",
    "who": "Rep. Gilbert Cisneros (CA-31)"
   },
   {
@@ -481,6 +425,22 @@
    "date": "Aug 25",
    "iso": "2026-08-25",
    "who": "Rep. April McClain Delaney (MD-6)"
+  },
+  {
+   "t": "KMX",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Aug 19",
+   "iso": "2026-08-19",
+   "who": "Rep. Gilbert Cisneros (CA-31)"
+  },
+  {
+   "t": "COHR",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Aug 18",
+   "iso": "2026-08-18",
+   "who": "Rep. Gilbert Cisneros (CA-31)"
   }
  ],
  "vol": [
