@@ -2,3 +2,4 @@ requests
 pdfplumber
 yfinance
 anthropic
+beautifulsoup4
