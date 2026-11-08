@@ -443,6 +443,57 @@
    "who": "Rep. Gilbert Cisneros (CA-31)"
   }
  ],
+ "hot": [
+  {
+   "t": "NOKBF",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 32500,
+   "sell": 0
+  },
+  {
+   "t": "RIG",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 32500,
+   "sell": 0
+  },
+  {
+   "t": "T",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 16001,
+   "sell": 0
+  },
+  {
+   "t": "GS",
+   "buyers": 2,
+   "sellers": 1,
+   "buy": 16001,
+   "sell": 8000
+  },
+  {
+   "t": "NG",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 8000,
+   "sell": 0
+  },
+  {
+   "t": "KO",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 8000,
+   "sell": 0
+  },
+  {
+   "t": "KMX",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 8000,
+   "sell": 0
+  }
+ ],
  "vol": [
   {
    "t": "COHR",
@@ -477,9 +528,49 @@
    "x": 1.4
   }
  ],
+ "vol_month": [
+  {
+   "t": "BA",
+   "x": 1.5
+  },
+  {
+   "t": "LMT",
+   "x": 1.5
+  },
+  {
+   "t": "COHR",
+   "x": 1.4
+  },
+  {
+   "t": "GOOGL",
+   "x": 1.4
+  },
+  {
+   "t": "CNP",
+   "x": 1.3
+  },
+  {
+   "t": "META",
+   "x": 1.3
+  },
+  {
+   "t": "AMD",
+   "x": 1.2
+  },
+  {
+   "t": "AMZN",
+   "x": 1.2
+  }
+ ],
  "stocks": {
   "AMD": {
    "name": "AMD",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "AMZN": {
+   "name": "AMZN",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -514,6 +605,12 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
+  "GOOGL": {
+   "name": "GOOGL",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
   "GS": {
    "name": "GS",
    "does": "Details unavailable.",
@@ -540,6 +637,18 @@
   },
   "KO": {
    "name": "KO",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "LMT": {
+   "name": "LMT",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "META": {
+   "name": "META",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
