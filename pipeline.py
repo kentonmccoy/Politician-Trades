@@ -105,7 +105,20 @@ def blurbs(tickers):
     return {t: have.get(t) or {"name": t, **fallback} for t in tickers}
 
 def main():
-    trades = fetch_house()
+    from senate import fetch_senate
+    try:
+        senate = fetch_senate()
+    except Exception as e:
+        print("Senate failed:", e)
+        senate = []
+    seen, trades = set(), []
+    for t in sorted(fetch_house() + senate, key=lambda t: t["iso"], reverse=True):
+        key = (t["who"], t["t"], t["side"], t["size"], t["iso"])
+        if key not in seen:
+            seen.add(key)
+            trades.append(t)
+    trades = trades[:100]
+
     vol = volume_leaders(sorted({t["t"] for t in trades} | set(WATCH)))
     needed = {t["t"] for t in trades} | {v["t"] for v in vol}
     OUT.mkdir(exist_ok=True)
