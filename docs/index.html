@@ -10,66 +10,95 @@
 :root{--bg:#F2F5FA;--card:#FFFFFF;--ink:#14213D;--mute:#5B6784;--line:#DCE3EF;--acc:#2B59C3;--buy:#1F8A5B;--sell:#C23B3B;--hot:#E8A33D;--tint:#E9EFFB;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10162A;--card:#192040;--ink:#EAF0FF;--mute:#9AA6C6;--line:#2A3459;--acc:#7DA2FF;--buy:#4CC38A;--sell:#F07A7A;--hot:#F0B85A;--tint:#222B52}}
-:root[data-theme="dark"]{--bg:#10162A;--card:#192040;--ink:#EAF0FF;--mute:#9AA6C6;--line:#2A3459;--acc:#7DA2FF;--buy:#4CC38A;--sell:#F07A7A;--hot:#F0B85A;--tint:#222B52}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
-main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
-h1{font-size:2rem;line-height:1.05;margin:4px 0 6px;font-weight:800;letter-spacing:-.02em}
-.sub{color:var(--mute);margin:0 0 14px}
-.banner{background:var(--tint);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.85rem;margin-bottom:16px}
-.tabs{display:flex;gap:6px;background:var(--tint);padding:4px;border-radius:12px;margin-bottom:14px}
-.tabs button{flex:1;border:0;background:transparent;color:var(--mute);font:600 .95rem inherit;font-family:inherit;padding:10px;border-radius:9px;cursor:pointer}
-.tabs button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(20,33,61,.15)}
+main{max-width:680px;margin:0 auto;padding:24px 16px 56px}
+h1{font-size:2.2rem;line-height:1.05;margin:0 0 6px;font-weight:800;letter-spacing:-.02em}
+.sub{color:var(--mute);margin:0 0 4px}
+.upd{color:var(--mute);font-size:.82rem;margin:0 0 18px}
+.tabs{display:flex;gap:4px;background:var(--tint);padding:4px;border-radius:14px;margin-bottom:16px;position:sticky;top:env(safe-area-inset-top,0px);z-index:2}
+.tabs button{flex:1;border:0;background:transparent;color:var(--mute);font:600 .92rem "Schibsted Grotesk",system-ui,sans-serif;padding:11px 6px;border-radius:10px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(20,33,61,.18)}
 button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
-.item{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.note{color:var(--mute);font-size:.9rem;margin:0 0 12px;max-width:60ch}
+.chips{display:flex;gap:8px;margin:0 0 12px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--mute);font:600 .85rem "Schibsted Grotesk",system-ui,sans-serif;padding:7px 14px;border-radius:99px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.item{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.item.b{border-left-color:var(--buy)}.item.s{border-left-color:var(--sell)}.item.h{border-left-color:var(--hot)}
 .row{display:flex;width:100%;gap:12px;align-items:center;text-align:left;border:0;background:none;color:inherit;font:inherit;padding:14px;cursor:pointer}
-.tick{font-weight:800;font-size:1.15rem;min-width:56px}
+.tick{font-weight:800;font-size:1.2rem;min-width:58px}
 .meta{flex:1;min-width:0}
-.meta b{display:block;font-weight:600}
+.meta>*{display:block}
+.meta b{font-weight:600}
 .meta span{color:var(--mute);font-size:.85rem}
-.tag{font-weight:800;font-size:.8rem;padding:3px 9px;border-radius:99px}
-.buy{background:color-mix(in srgb,var(--buy) 18%,transparent);color:var(--buy)}
-.sell{background:color-mix(in srgb,var(--sell) 18%,transparent);color:var(--sell)}
-.both{display:inline-block;margin-top:4px;font-size:.78rem;font-weight:600;color:var(--hot)}
-.detail{display:none;padding:0 14px 14px;border-top:1px solid var(--line)}
+.meta .co{font-size:.8rem}
+.tag{font-weight:800;font-size:.8rem;padding:3px 10px;border-radius:99px}
+.tag.buy{background:color-mix(in srgb,var(--buy) 18%,transparent);color:var(--buy)}
+.tag.sell{background:color-mix(in srgb,var(--sell) 18%,transparent);color:var(--sell)}
+.meta .both{margin-top:3px;font-size:.78rem;font-weight:600;color:var(--hot)}
+.detail{display:none;padding:0 16px 16px;border-top:1px solid var(--line)}
 .item.open .detail{display:block}
 .detail h3{font-size:.9rem;margin:14px 0 2px}
 .detail p{margin:0;font-size:.95rem}
-.bar{height:8px;border-radius:6px;background:var(--tint);margin-top:6px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--hot)}
-.mult{font-weight:800;font-size:1.1rem;color:var(--hot)}
-.fine{font-size:.78rem;color:var(--mute);margin-top:18px}
+.detail .soon{color:var(--mute);margin-top:14px}
+.bar,.two{height:8px;border-radius:6px;background:var(--tint);margin-top:8px;overflow:hidden;display:flex}
+.bar i,.two i{display:block;height:100%}
+.bar i{background:var(--hot)}.two .g{background:var(--buy)}.two .r{background:var(--sell)}
+.meta .mult{font-weight:800;font-size:1.05rem;color:var(--hot)}
+.empty{color:var(--mute);padding:24px 4px}
+.fine{font-size:.78rem;color:var(--mute);margin-top:22px;max-width:60ch}
 </style>
 </head>
 <body>
 <main>
 <h1>Capitol Guide</h1>
 <p class="sub">What politicians are trading, in plain English.</p>
-<div class="banner" id="banner">Loading…</div>
+<p class="upd" id="upd">Loading…</p>
 <div class="tabs" role="tablist">
-<button role="tab" id="t1" aria-selected="true">Politician trades</button>
-<button role="tab" id="t2" aria-selected="false">Busy stocks today</button>
+<button role="tab" data-v="trades" aria-selected="true">Trades</button>
+<button role="tab" data-v="busy" aria-selected="false">Busy stocks</button>
+<button role="tab" data-v="hot" aria-selected="false">Hot stocks</button>
 </div>
+<div id="head"></div>
 <div id="list"></div>
-<p class="fine">For education only, not financial advice. Politicians can file trades up to 45 days after they happen, so this data is always behind. A disclosed trade doesn’t show why it was made.</p>
+<p class="fine">For education only, not financial advice. Politicians can report trades up to 45 days after they happen, so this data is always behind, and a trade doesn’t show why it was made. Rankings show where politicians are active, not where a price is headed.</p>
 </main>
 <script>
-var STOCKS={},TRADES=[],VOL=[],traded={};
-var list=document.getElementById("list"),tabs=[document.getElementById("t1"),document.getElementById("t2")];
-function detail(tk,extra){var s=STOCKS[tk];return '<div class="detail">'+(extra||"")+'<h3>What the company does</h3><p>'+s.does+'</p><h3>Why it may be active</h3><p>'+s.why+'</p><h3>Things to weigh</h3><p>'+s.weigh+'</p></div>'}
-function item(inner,tk,extra){var d=document.createElement("div");d.className="item";d.innerHTML='<button class="row" aria-expanded="false">'+inner+'</button>'+detail(tk,extra);
-d.querySelector(".row").onclick=function(){var o=d.classList.toggle("open");this.setAttribute("aria-expanded",o)};return d}
-function show(n){tabs.forEach(function(b,i){b.setAttribute("aria-selected",i==n)});list.innerHTML="";
-if(n==0){TRADES.forEach(function(r){var busy=VOL.some(function(v){return v.t==r.t});
-list.appendChild(item('<span class="tick">'+r.t+'</span><span class="meta"><b>'+r.who+'</b><span>'+r.size+' · '+r.date+'</span>'+(busy?'<span class="both">Also unusually busy today</span>':'')+'</span><span class="tag '+r.side.toLowerCase()+'">'+r.side+'</span>',r.t))})}
-else{VOL.forEach(function(v){var r=traded[v.t];
-list.appendChild(item('<span class="tick">'+v.t+'</span><span class="meta"><span class="mult">'+v.x+'× normal volume</span><div class="bar"><i style="width:'+Math.min(100,v.x/4*100)+'%"></i></div>'+(r?'<span class="both">A politician also traded this</span>':'')+'</span>',v.t,r?'<h3>Politician activity</h3><p>'+r.who+' reported a '+r.side.toLowerCase()+' ('+r.size+') on '+r.date+'.</p>':''))})}}
-tabs[0].onclick=function(){show(0)};tabs[1].onclick=function(){show(1)};
+var D={stocks:{},trades:[],vol:[],vol_month:[],hot:[]},view="trades",sub="day",flt="all";
+var $=function(i){return document.getElementById(i)};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function money(n){return n>=1e6?"$"+(n/1e6).toFixed(1).replace(/\.0$/,"")+"M":n>=1e3?"$"+Math.round(n/1e3)+"K":"$"+n}
+function name(tk){var s=D.stocks[tk];return s&&s.name&&s.name!==tk?'<span class="co">'+esc(s.name)+'</span>':""}
+function blurb(tk){var s=D.stocks[tk];if(!s||s.does==="Details unavailable.")return'<p class="soon">Plain-English notes aren’t turned on yet.</p>';
+return"<h3>What the company does</h3><p>"+esc(s.does)+"</p><h3>Why it may be active</h3><p>"+esc(s.why)+"</p><h3>Things to weigh</h3><p>"+esc(s.weigh)+"</p>"}
+function card(cls,inner,extra,tk){var d=document.createElement("div");d.className="item "+cls;
+d.innerHTML='<button class="row" aria-expanded="false">'+inner+'</button><div class="detail">'+(extra||"")+blurb(tk)+"</div>";
+var b=d.querySelector(".row");b.onclick=function(){b.setAttribute("aria-expanded",d.classList.toggle("open"))};return d}
+function chip(attr,v,label,on){return'<button class="chip" data-'+attr+'="'+v+'" aria-pressed="'+on+'">'+label+"</button>"}
+function render(){var L=$("list"),H=$("head");L.innerHTML="";
+document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.v===view)});
+var busy={},byT={};D.vol.concat(D.vol_month).forEach(function(v){busy[v.t]=1});D.trades.forEach(function(r){if(!byT[r.t])byT[r.t]=r});
+if(view==="trades"){var ppl={};D.trades.forEach(function(r){ppl[r.who]=1});
+H.innerHTML='<p class="note">'+D.trades.length+" recent trades from "+Object.keys(ppl).length+" House members. Tap a trade to learn about the stock.</p><div class=\"chips\">"+chip("f","all","All",flt==="all")+chip("f","Buy","Buys",flt==="Buy")+chip("f","Sell","Sells",flt==="Sell")+"</div>";
+var rows=D.trades.filter(function(r){return flt==="all"||r.side===flt});
+rows.forEach(function(r){L.appendChild(card(r.side==="Buy"?"b":"s",'<span class="tick">'+esc(r.t)+'</span><span class="meta"><b>'+esc(r.who)+"</b>"+name(r.t)+"<span>"+esc(r.size)+" · "+esc(r.date)+"</span>"+(busy[r.t]?'<span class="both">Also unusually busy lately</span>':"")+'</span><span class="tag '+r.side.toLowerCase()+'">'+r.side+"</span>","",r.t))});
+if(!rows.length)L.innerHTML='<p class="empty">No trades to show yet.</p>'}
+else if(view==="busy"){var list=sub==="day"?D.vol:D.vol_month;
+H.innerHTML='<div class="chips">'+chip("s","day","Latest trading day",sub==="day")+chip("s","month","Past month",sub==="month")+'</div><p class="note">'+(sub==="day"?"Volume on the latest trading day compared with the stock’s average over the 30 days before.":"Average volume over the past month compared with the three months before it.")+"</p>";
+list.forEach(function(v){var r=byT[v.t];L.appendChild(card("h",'<span class="tick">'+esc(v.t)+'</span><span class="meta"><span class="mult">'+v.x+"× usual volume</span>"+name(v.t)+'<div class="bar"><i style="width:'+Math.min(100,v.x/4*100)+'%"></i></div>'+(r?'<span class="both">A politician also traded this</span>':"")+"</span>",r?"<h3>Politician activity</h3><p>"+esc(r.who)+" reported a "+r.side.toLowerCase()+" ("+esc(r.size)+") on "+esc(r.date)+".</p>":"",v.t))});
+if(!list.length)L.innerHTML='<p class="empty">No data for this view yet. It fills in after the next update.</p>'}
+else{H.innerHTML='<p class="note">Stocks where House members bought more than they sold lately, ranked by how many are buying. Dollar amounts are estimates from the ranges they report.</p>';
+D.hot.forEach(function(h){var pct=Math.round(h.buy/(h.buy+h.sell||1)*100);
+L.appendChild(card("h",'<span class="tick">'+esc(h.t)+'</span><span class="meta"><b>'+h.buyers+" buying · "+h.sellers+" selling</b>"+name(h.t)+"<span>about "+money(h.buy-h.sell)+' more bought than sold</span><div class="two"><i class="g" style="width:'+pct+'%"></i><i class="r" style="width:'+(100-pct)+'%"></i></div></span>',"<h3>The numbers</h3><p>About "+money(h.buy)+" bought and "+money(h.sell)+" sold across recent filings.</p>",h.t))});
+if(!D.hot.length)L.innerHTML='<p class="empty">No data for this view yet. It fills in after the next update.</p>'}}
+document.querySelector(".tabs").onclick=function(e){var b=e.target.closest("[data-v]");if(b){view=b.dataset.v;render()}};
+$("head").onclick=function(e){var f=e.target.closest("[data-f]"),s=e.target.closest("[data-s]");if(f)flt=f.dataset.f;if(s)sub=s.dataset.s;if(f||s)render()};
 fetch("data.json").then(function(r){return r.json()}).then(function(d){
-STOCKS=d.stocks;TRADES=d.trades;VOL=d.vol;TRADES.forEach(function(r){if(!traded[r.t])traded[r.t]=r});
-document.getElementById("banner").innerHTML=d.sample?"<b>Sample data.</b> Made-up numbers that show the design.":"<b>Updated "+d.updated+".</b> Trades come from House Clerk filings.";
-show(0)}).catch(function(){list.innerHTML="<p>Couldn’t load data.json. Run the pipeline first.</p>"});
+D.stocks=d.stocks||{};D.trades=d.trades||[];D.vol=d.vol||[];D.vol_month=d.vol_month||[];D.hot=d.hot||[];
+$("upd").textContent=d.sample?"Sample data, not real trades.":"Updated "+d.updated+" from House Clerk filings.";render()})
+.catch(function(){$("upd").textContent="Couldn’t load data.json.";});
 </script>
 </body>
 </html>
