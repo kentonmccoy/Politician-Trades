@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outfit Swap</title>
+<style>
+  :root {
+    --bg: #faf8f4; --card: #ffffff; --ink: #1f1d1a; --muted: #6b665e;
+    --line: #e6e1d8; --accent: #c98a00; --accent-ink: #ffffff; --chip: #f2eee6;
+    --err: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161513; --card: #201f1c; --ink: #f1ede6; --muted: #a39d92;
+      --line: #36332e; --accent: #f0b429; --accent-ink: #1a1500; --chip: #2a2824; --err: #ff8a80; }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: 1fr 360px; gap: 20px; align-items: start; }
+  @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+  .drop { border: 2px dashed var(--line); border-radius: 12px; min-height: 340px; display: flex;
+    align-items: center; justify-content: center; text-align: center; cursor: pointer;
+    color: var(--muted); padding: 16px; transition: border-color .15s; }
+  .drop.over { border-color: var(--accent); }
+  .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .photos.single { grid-template-columns: 1fr; }
+  @media (max-width: 560px) { .photos { grid-template-columns: 1fr; } }
+  figure { margin: 0; position: relative; }
+  figure img { width: 100%; border-radius: 10px; display: block; background: var(--chip); }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+  .busy { position: absolute; inset: 0; display: none; align-items: center; justify-content: center;
+    flex-direction: column; gap: 10px; background: color-mix(in srgb, var(--card) 75%, transparent);
+    border-radius: 10px; font-weight: 600; }
+  .busy.on { display: flex; }
+  .spin { width: 34px; height: 34px; border: 4px solid var(--line); border-top-color: var(--accent);
+    border-radius: 50%; animation: s 0.9s linear infinite; }
+  @keyframes s { to { transform: rotate(360deg); } }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted);
+    margin: 14px 0 8px; }
+  h2:first-child { margin-top: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { border: 1px solid var(--line); background: var(--chip); color: var(--ink); border-radius: 999px;
+    padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer; display: inline-flex;
+    align-items: center; gap: 6px; }
+  .chip .sw { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,.2); }
+  .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  input[type=text] { width: 100%; font: inherit; padding: 10px 12px; border-radius: 10px;
+    border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+  .summary { margin: 14px 0 10px; padding: 10px 12px; background: var(--chip); border-radius: 10px; font-size: 14px; }
+  .btn { width: 100%; font: inherit; font-weight: 600; padding: 12px; border-radius: 10px; border: 0;
+    background: var(--accent); color: var(--accent-ink); cursor: pointer; }
+  .btn:disabled { opacity: .5; cursor: not-allowed; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .row { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  .row .btn { flex: 1; min-width: 140px; }
+  .err { color: var(--err); font-size: 14px; margin-top: 10px; min-height: 1em; }
+  .note { color: var(--muted); font-size: 13px; margin-top: 12px; }
+  .banner { background: var(--chip); border-left: 4px solid var(--accent); padding: 10px 12px;
+    border-radius: 8px; margin-bottom: 16px; font-size: 14px; display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Outfit Swap</h1>
+  <p class="sub">Upload a photo of a person, pick the clothes, and see them wearing the new outfit.</p>
+  <div class="banner" id="banner"></div>
+
+  <div class="grid">
+    <section class="card">
+      <input type="file" id="file" accept="image/png,image/jpeg,image/webp,image/heic" hidden>
+      <div class="drop" id="drop">
+        <div><strong>Click to choose a photo</strong><br>or drag one here (JPG or PNG)</div>
+      </div>
+      <div class="photos" id="photos" hidden>
+        <figure><img id="before" alt="Original photo"><figcaption id="beforeCap">Starting photo</figcaption></figure>
+        <figure id="afterFig" hidden>
+          <img id="after" alt="Photo with new outfit">
+          <figcaption id="afterCap">New outfit</figcaption>
+          <div class="busy" id="busyAfter"><div class="spin"></div><div>Changing clothes… (can take ~30–60s)</div></div>
+        </figure>
+      </div>
+      <div class="row" id="resultActions" hidden>
+        <button class="btn ghost" id="download">Download</button>
+        <button class="btn ghost" id="keep" title="Make further changes on top of this result">Keep editing this one</button>
+        <button class="btn ghost" id="newPhoto">New photo</button>
+      </div>
+    </section>
+
+    <aside class="card">
+      <div id="picker"></div>
+      <h2>Or describe something else</h2>
+      <input type="text" id="custom" maxlength="200" placeholder="e.g. red leather jacket, green sneakers">
+      <div class="summary" id="summary"></div>
+      <button class="btn" id="go" disabled>Change outfit</button>
+      <div class="err" id="err" role="alert"></div>
+      <p class="note">Only use photos of people who are okay with it. Faces and backgrounds are kept the same; only the clothes change.</p>
+    </aside>
+  </div>
+</main>
+
+<script>
+// slot: "full" replaces both top and bottom; others can be mixed together.
+const CATALOG = [
+  { title: "Dresses", slot: "full", items: [
+    ["yellow dress", "#f4c430"], ["red dress", "#c62828"], ["black dress", "#111"],
+    ["floral summer dress", "#f48fb1"], ["blue dress", "#1e63c5"] ] },
+  { title: "Tops", slot: "top", items: [
+    ["white top", "#fff"], ["black t-shirt", "#111"], ["blue button-up shirt", "#6a9ad4"],
+    ["grey hoodie", "#8a8a8a"], ["striped sweater", "#2b3a67"] ] },
+  { title: "Bottoms", slot: "bottom", items: [
+    ["blue jeans", "#3b5f8f"], ["black jeans", "#222"], ["khaki pants", "#c3b091"],
+    ["white shorts", "#fff"], ["denim skirt", "#5b7db1"] ] },
+  { title: "Jackets", slot: "outer", items: [
+    ["denim jacket", "#4a6fa5"], ["black leather jacket", "#1a1a1a"], ["beige trench coat", "#d2b48c"] ] },
+];
+
+const state = { slots: { full: "yellow dress" }, start: null, result: null, busy: false };
+const $ = id => document.getElementById(id);
+
+function renderPicker() {
+  $("picker").innerHTML = "";
+  for (const group of CATALOG) {
+    const h = document.createElement("h2"); h.textContent = group.title;
+    const wrap = document.createElement("div"); wrap.className = "chips";
+    for (const [name, color] of group.items) {
+      const b = document.createElement("button");
+      b.className = "chip"; b.type = "button";
+      b.setAttribute("aria-pressed", state.slots[group.slot] === name);
+      b.innerHTML = `<span class="sw" style="background:${color}"></span>${name}`;
+      b.onclick = () => choose(group.slot, name);
+      wrap.appendChild(b);
+    }
+    $("picker").append(h, wrap);
+  }
+  renderSummary();
+}
+
+function choose(slot, name) {
+  if (state.slots[slot] === name) delete state.slots[slot];
+  else {
+    state.slots[slot] = name;
+    if (slot === "full") { delete state.slots.top; delete state.slots.bottom; }
+    if (slot === "top" || slot === "bottom") delete state.slots.full;
+  }
+  renderPicker();
+}
+
+function outfitText() {
+  const parts = ["full", "top", "bottom", "outer"].map(s => state.slots[s]).filter(Boolean);
+  const custom = $("custom").value.trim();
+  if (custom) parts.push(custom);
+  return parts.join(", ");
+}
+
+function renderSummary() {
+  const o = outfitText();
+  $("summary").innerHTML = o ? `<strong>Outfit:</strong> ${escapeHtml(o)}` : "Pick at least one item.";
+  $("go").disabled = !o || !state.start || state.busy;
+  $("go").textContent = state.start ? "Change outfit" : "Upload a photo first";
+}
+const escapeHtml = s => s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+// Shrink big phone photos before upload: faster and cheaper, plenty for the model.
+function loadPhoto(file) {
+  if (!file || !file.type.startsWith("image/")) { showErr("Please choose an image file."); return; }
+  const img = new Image();
+  img.onload = () => {
+    const max = 1536, scale = Math.min(1, max / Math.max(img.width, img.height));
+    const c = document.createElement("canvas");
+    c.width = Math.round(img.width * scale); c.height = Math.round(img.height * scale);
+    c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+    setStart(c.toDataURL("image/jpeg", 0.92), "Starting photo");
+    URL.revokeObjectURL(img.src);
+  };
+  img.onerror = () => showErr("That photo couldn't be opened. Try a JPG or PNG.");
+  img.src = URL.createObjectURL(file);
+}
+
+function setStart(dataUrl, caption) {
+  state.start = dataUrl; state.result = null;
+  $("before").src = dataUrl; $("beforeCap").textContent = caption;
+  $("drop").hidden = true; $("photos").hidden = false;
+  $("afterFig").hidden = true; $("photos").classList.add("single");
+  $("resultActions").hidden = true; showErr("");
+  renderSummary();
+}
+
+async function swap() {
+  const outfit = outfitText();
+  if (!outfit || !state.start) return;
+  state.busy = true; showErr(""); renderSummary();
+  $("afterFig").hidden = false; $("photos").classList.remove("single");
+  $("busyAfter").classList.add("on");
+  if (!state.result) $("after").src = state.start;
+  try {
+    const r = await fetch("/api/swap", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ image: state.start, outfit }) });
+    const data = await r.json().catch(() => ({ error: "Unexpected response from server." }));
+    if (!r.ok) throw new Error(data.error || "Request failed.");
+    state.result = data.image;
+    $("after").src = data.image; $("afterCap").textContent = "Wearing: " + outfit;
+    $("resultActions").hidden = false;
+  } catch (e) {
+    showErr(e.message);
+    if (!state.result) { $("afterFig").hidden = true; $("photos").classList.add("single"); }
+  } finally {
+    state.busy = false; $("busyAfter").classList.remove("on"); renderSummary();
+  }
+}
+
+function showErr(msg) { $("err").textContent = msg; }
+
+$("drop").onclick = () => $("file").click();
+$("file").onchange = e => loadPhoto(e.target.files[0]);
+$("drop").ondragover = e => { e.preventDefault(); $("drop").classList.add("over"); };
+$("drop").ondragleave = () => $("drop").classList.remove("over");
+$("drop").ondrop = e => { e.preventDefault(); $("drop").classList.remove("over"); loadPhoto(e.dataTransfer.files[0]); };
+$("custom").oninput = renderSummary;
+$("custom").onkeydown = e => { if (e.key === "Enter" && !$("go").disabled) swap(); };
+$("go").onclick = swap;
+$("download").onclick = () => {
+  const a = document.createElement("a"); a.href = state.result; a.download = "outfit-swap.png"; a.click();
+};
+$("keep").onclick = () => setStart(state.result, "Starting photo (previous result)");
+$("newPhoto").onclick = () => { $("file").value = ""; $("file").click(); };
+
+fetch("/api/status").then(r => r.json()).then(s => {
+  if (!s.ready) {
+    $("banner").style.display = "block";
+    $("banner").textContent = "Setup needed: the server has no OPENAI_API_KEY, so outfit changes won't work yet. See the README.";
+  }
+}).catch(() => {});
+
+renderPicker();
+</script>
+</body>
+</html>
