@@ -1,8 +1,9 @@
-"""Builds docs/data.json: recent House trades, busy stocks (latest day + past month),
+"""Builds docs/data.json: recent House and Senate trades, busy stocks (latest day + past month),
 a ranking of stocks politicians are net buying, plus headlines and plain-English notes."""
 import datetime as dt, json, re
 from pipeline import OUT, WATCH, fetch_house
 from news import fetch_news, news_blurbs
+from bargo import fetch_senate
 
 def dollars(size):
     nums = [int(n.replace(",", "")) for n in re.findall(r"\$([\d,]+)", size)]
@@ -40,7 +41,12 @@ def volume_both(tickers):
 
 def main():
     seen, trades = set(), []
-    for t in sorted(fetch_house(limit=250), key=lambda t: t["iso"], reverse=True):
+    try:
+        senate = fetch_senate()
+    except Exception as e:
+        print("Senate failed:", type(e).__name__)
+        senate = []
+    for t in sorted(fetch_house(limit=250) + senate, key=lambda t: t["iso"], reverse=True):
         key = (t["who"], t["t"], t["side"], t["size"], t["iso"])
         if key not in seen:
             seen.add(key)
