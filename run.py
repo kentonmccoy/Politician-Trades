@@ -28,11 +28,11 @@ def hot_stocks(trades, top=10):
 
 def volume_both(tickers):
     import yfinance as yf
-    df = yf.download(sorted(tickers), period="6mo", progress=False, group_by="ticker", auto_adjust=True)
+    df = yf.download([t.replace(".", "-") for t in sorted(tickers)], period="6mo", progress=False, group_by="ticker", auto_adjust=True)
     day, month = [], []
     for tk in tickers:
         try:
-            v = df[tk]["Volume"].dropna()
+            v = df[tk.replace(".", "-")]["Volume"].dropna()
         except KeyError:
             continue
         if len(v) < 90:
@@ -54,11 +54,17 @@ def main():
         if key not in seen:
             seen.add(key)
             trades.append(t)
+    # OCR can misread a ticker: keep a scanned-filing trade only if Yahoo knows the stock.
+    scan_info = company_info(sorted({t["t"] for t in trades if t.get("scan")}))
+    kept = [t for t in trades if not t.get("scan") or t["t"] in scan_info]
+    if len(kept) != len(trades):
+        print(f"Dropped {len(trades) - len(kept)} scanned-filing trades with unrecognised tickers.")
+    trades = kept
     day, month = volume_both(sorted({t["t"] for t in trades} | set(WATCH)))
     hot_all = hot_stocks(trades, top=30)
     shown = trades[:100]
     candidates = sorted({t["t"] for t in shown} | {v["t"] for v in day + month} | {h["t"] for h in hot_all})
-    info = company_info(candidates)
+    info = {**scan_info, **company_info([c for c in candidates if c not in scan_info])}
     # Drop over-the-counter foreign shares (like NOKBF) from the Hot list; keep a stock if Yahoo doesn't know it.
     hot = [h for h in hot_all if info.get(h["t"], {}).get("exchange") not in OTC][:10]
     tickers = sorted({t["t"] for t in shown} | {v["t"] for v in day + month} | {h["t"] for h in hot})

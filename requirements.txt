@@ -3,3 +3,4 @@ pdfplumber
 yfinance
 anthropic
 beautifulsoup4
+pytesseract

@@ -33,3 +33,19 @@ def test_main_end_to_end(monkeypatch, tmp_path):
     assert d["stocks"]["DIS"]["name"] == "Walt Disney Co"         # Yahoo name fills the gap
     assert d["stocks"]["PG"]["name"] == "AI Name"                 # AI name wins when present
     assert len([t for t in d["trades"] if t["t"] == "PG"]) == 1   # duplicates removed
+
+def test_scanned_trade_with_unknown_ticker_is_dropped(monkeypatch, tmp_path):
+    good = {**tr("DIS", "Buy", "A"), "scan": True}
+    bad = {**tr("DlS", "Buy", "A"), "scan": True}   # OCR misread: unknown to Yahoo
+    typed = tr("PG", "Buy", "B")
+    monkeypatch.setattr(run, "OUT", tmp_path / "docs")
+    monkeypatch.setattr(run, "fetch_house", lambda days, limit: [good, bad, typed])
+    monkeypatch.setattr(run, "fetch_senate", lambda days: [])
+    monkeypatch.setattr(run, "volume_both", lambda tickers: ([], []))
+    monkeypatch.setattr(run, "company_info", lambda ts: {t: {"name": t, "exchange": "NYQ"} for t in ts if t != "DlS"})
+    monkeypatch.setattr(run, "fetch_news", lambda ts: {})
+    monkeypatch.setattr(run, "news_blurbs", lambda ts, news: {t: {"name": t} for t in ts})
+    run.main()
+    d = json.loads((tmp_path / "docs" / "data.json").read_text())
+    assert sorted(t["t"] for t in d["trades"]) == ["DIS", "PG"]
+    assert [t.get("scan") for t in d["trades"] if t["t"] == "DIS"] == [True]

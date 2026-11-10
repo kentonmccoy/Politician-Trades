@@ -18,7 +18,7 @@ def company_info(tickers):
     out, misses = {}, 0
     for tk in tickers:
         try:
-            info = yf.Ticker(tk).info or {}
+            info = yf.Ticker(tk.replace(".", "-")).info or {}
             name = tidy(info.get("shortName") or info.get("longName"))
             if not name:
                 raise ValueError("no name")

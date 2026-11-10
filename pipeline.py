@@ -63,8 +63,7 @@ def parse_ptr_text(text, misses=None):
             misses.append(text[max(0, m.start() - 120): m.end() + 60])
     return rows
 
-def pdf_text(doc, year):
-    import pdfplumber
+def pdf_file(doc, year):
     CACHE.mkdir(exist_ok=True)
     f = CACHE / f"{doc}.pdf"
     if not f.exists():
@@ -72,8 +71,25 @@ def pdf_text(doc, year):
         r.raise_for_status()
         f.write_bytes(r.content)
         time.sleep(0.5)  # be polite to the server
-    with pdfplumber.open(f) as pdf:
+    return f
+
+def pdf_text(doc, year):
+    import pdfplumber
+    with pdfplumber.open(pdf_file(doc, year)) as pdf:
         return " ".join((p.extract_text() or "") for p in pdf.pages)
+
+def fix_ocr(text):
+    """Undo the most common OCR slips that would break the strict row pattern."""
+    text = re.sub(r"[\[(]\s*S\s*T\s*[\])]", "[ST]", text)
+    return re.sub(r"[\u2010-\u2015\u2212]", "-", text)
+
+def ocr_text(f):
+    """Read a scanned (image-only) PDF with Tesseract. Only used when a filing has no text."""
+    import pdfplumber, pytesseract
+    with pdfplumber.open(f) as pdf:
+        pages = [pytesseract.image_to_string(p.to_image(resolution=300).original, config="--psm 6")
+                 for p in pdf.pages]
+    return fix_ocr(" ".join(pages))
 
 def diagnose(text, rows, who, misses):
     """Say how well the parser did on one filing, so gaps are visible in the run log."""
@@ -101,20 +117,28 @@ def fetch_house(days=60, limit=80):
             continue
         if filed >= cutoff:
             filings.append((filed, m))
-    trades, stats = [], {"ok": 0, "partial": 0, "no_text": 0, "error": 0}
+    trades, stats = [], {"ok": 0, "partial": 0, "no_text": 0, "error": 0, "scan_read": 0, "scan_empty": 0}
     print(f"House: {len(filings)} filings in the last {days} days")
     for filed, m in sorted(filings, key=lambda x: x[0], reverse=True):
         sd = re.match(r"([A-Z]{2})(\d+)", (m.findtext("StateDst") or "").strip())
         place = "" if not sd else f" ({sd.group(1)}-{int(sd.group(2))})" if int(sd.group(2)) else f" ({sd.group(1)})"
         who = f"Rep. {(m.findtext('First') or '').strip()} {(m.findtext('Last') or '').strip()}{place}"
         try:
-            text = pdf_text(m.findtext("DocID").strip(), year)
-            misses = []
+            doc = m.findtext("DocID").strip()
+            text = pdf_text(doc, year)
+            misses, scan = [], False
+            if not text.strip():          # image-only filing: try OCR, and mark what comes out of it
+                scan, text = True, ocr_text(pdf_file(doc, year))
             rows = parse_ptr_text(text, misses)
         except Exception as e:
             stats["error"] += 1
             print("skipped a filing:", type(e).__name__, e); continue
-        stats[diagnose(text, rows, who, misses)] += 1
+        if scan:
+            stats["scan_read" if rows else "scan_empty"] += 1
+            print(f"  SCAN {who}: OCR read {len(rows)} rows; text starts {' '.join(text.split())[:140]!r}")
+            rows = [{**r, "scan": True} for r in rows]
+        else:
+            stats[diagnose(text, rows, who, misses)] += 1
         trades += [{**row, "who": who} for row in rows]
         if len(trades) >= limit:
             break
