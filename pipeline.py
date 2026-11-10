@@ -19,15 +19,41 @@ PROMPT = ("You explain stocks to complete beginners. Reply with ONLY a JSON obje
           "'weigh': one honest risk or caution. Plain words, max 25 words per field. "
           "Never say to buy or sell. The user message is a ticker symbol.")
 
+TICK = re.compile(r"\(([A-Z][A-Z.\-]{0,5})\)")
+FIELDS = re.compile(r"\b(P|S(?: \(partial\))?)\s+(\d{2}/\d{2}/\d{4})\s+\d{2}/\d{2}/\d{4}\s+"
+                    r"(\$[\d,]+\s*-\s*\$[\d,]+|Over \$[\d,]+)")
+
+def _row(tk, kind, tdate, amt):
+    d = dt.datetime.strptime(tdate, "%m/%d/%Y")
+    return {"t": tk, "side": "Buy" if kind == "P" else "Sell",
+            "size": re.sub(r"\s*-\s*", "–", amt), "date": d.strftime("%b ") + str(d.day),
+            "iso": d.date().isoformat()}
+
 def parse_ptr_text(text):
-    """Pull stock transactions out of the text of one House PTR filing."""
-    text = re.sub(r"\s+", " ", text)
-    rows = []
+    """Pull stock transactions out of the text of one House PTR filing.
+    Filings lay the columns out in different orders (the ticker can sit before or after the
+    type, dates and amount, and the amount can be split by the ticker), so besides the plain
+    pattern we also read each row on its own: rows end at the 'F S: New' marker."""
+    text = re.sub(r"\s+", " ", text.replace("\x00", ""))
+    rows, seen = [], set()
+    def add(r):
+        k = (r["t"], r["side"], r["iso"], r["size"])
+        if k not in seen:
+            seen.add(k); rows.append(r)
     for tk, kind, tdate, _notified, amt in ROW.findall(text):
-        d = dt.datetime.strptime(tdate, "%m/%d/%Y")
-        rows.append({"t": tk, "side": "Buy" if kind == "P" else "Sell",
-                     "size": re.sub(r"\s*-\s*", "–", amt), "date": d.strftime("%b ") + str(d.day),
-                     "iso": d.date().isoformat()})
+        add(_row(tk, kind, tdate, amt))
+    for chunk in re.split(r"\bF\s+S:\s*\w+", text):
+        if chunk.count("[ST]") != 1 or len(re.findall(r"\[[A-Z]{2}\]", chunk)) != 1:
+            continue
+        before = chunk[:chunk.index("[ST]")]
+        ticks = TICK.findall(before)
+        if not ticks:
+            continue
+        clean = re.sub(r"\s+", " ", TICK.sub(" ", chunk).replace("[ST]", " "))
+        found = FIELDS.findall(clean)
+        if found:
+            kind, tdate, amt = found[-1]
+            add(_row(ticks[-1], kind[0], tdate, amt))
     return rows
 
 def pdf_text(doc, year):
