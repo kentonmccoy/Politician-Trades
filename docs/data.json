@@ -35,6 +35,38 @@
    "who": "Rep. Pete Sessions (TX-17)"
   },
   {
+   "t": "ZTS",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 21",
+   "iso": "2026-10-21",
+   "who": "Sen. Shelley M Capito (WV)"
+  },
+  {
+   "t": "MSFT",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 21",
+   "iso": "2026-10-21",
+   "who": "Sen. Shelley M Capito (WV)"
+  },
+  {
+   "t": "META",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 21",
+   "iso": "2026-10-21",
+   "who": "Sen. Shelley M Capito (WV)"
+  },
+  {
+   "t": "AAPL",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 21",
+   "iso": "2026-10-21",
+   "who": "Sen. Shelley M Capito (WV)"
+  },
+  {
    "t": "T",
    "side": "Buy",
    "size": "$1,001\u2013$15,000",
@@ -49,6 +81,22 @@
    "date": "Oct 15",
    "iso": "2026-10-15",
    "who": "Rep. David J. Taylor (OH-2)"
+  },
+  {
+   "t": "MSFT",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Oct 15",
+   "iso": "2026-10-15",
+   "who": "Sen. Sheldon Whitehouse (RI)"
+  },
+  {
+   "t": "AMGN",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 15",
+   "iso": "2026-10-15",
+   "who": "Sen. Sheldon Whitehouse (RI)"
   },
   {
    "t": "PG",
@@ -107,6 +155,14 @@
    "who": "Rep. Gilbert Cisneros (CA-31)"
   },
   {
+   "t": "APTV",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 25",
+   "iso": "2026-09-25",
+   "who": "Sen. John Boozman (AR)"
+  },
+  {
    "t": "BA",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
@@ -131,6 +187,30 @@
    "who": "Rep. Maria Elvira Salazar (FL-27)"
   },
   {
+   "t": "O",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 24",
+   "iso": "2026-09-24",
+   "who": "Sen. John Boozman (AR)"
+  },
+  {
+   "t": "CSCO",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 24",
+   "iso": "2026-09-24",
+   "who": "Sen. John Boozman (AR)"
+  },
+  {
+   "t": "MU",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 24",
+   "iso": "2026-09-24",
+   "who": "Sen. John Boozman (AR)"
+  },
+  {
    "t": "HD",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
@@ -147,12 +227,36 @@
    "who": "Rep. Kevin Hern (OK-1)"
   },
   {
+   "t": "STLN",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 23",
+   "iso": "2026-09-23",
+   "who": "Sen. Richard Blumenthal (CT)"
+  },
+  {
    "t": "HD",
    "side": "Buy",
    "size": "$1,001\u2013$15,000",
    "date": "Sep 22",
    "iso": "2026-09-22",
    "who": "Rep. David J. Taylor (OH-2)"
+  },
+  {
+   "t": "STLN",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 22",
+   "iso": "2026-09-22",
+   "who": "Sen. Richard Blumenthal (CT)"
+  },
+  {
+   "t": "STLN",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 22",
+   "iso": "2026-09-22",
+   "who": "Sen. Richard Blumenthal (CT)"
   },
   {
    "t": "ITT",
@@ -169,6 +273,22 @@
    "date": "Sep 18",
    "iso": "2026-09-18",
    "who": "Rep. Laurel Lee (FL-15)"
+  },
+  {
+   "t": "STLN",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 18",
+   "iso": "2026-09-18",
+   "who": "Sen. Richard Blumenthal (CT)"
+  },
+  {
+   "t": "STLN",
+   "side": "Sell",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 18",
+   "iso": "2026-09-18",
+   "who": "Sen. Richard Blumenthal (CT)"
   },
   {
    "t": "MRSH",
@@ -418,6 +538,20 @@
    "sell": 0
   },
   {
+   "t": "O",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 8000,
+   "sell": 0
+  },
+  {
+   "t": "CSCO",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 8000,
+   "sell": 0
+  },
+  {
    "t": "NG",
    "buyers": 1,
    "sellers": 0,
@@ -435,11 +569,19 @@
  "vol": [
   {
    "t": "NVDA",
-   "x": 2.1
+   "x": 2.2
+  },
+  {
+   "t": "STLN",
+   "x": 1.8
   },
   {
    "t": "AMD",
    "x": 1.3
+  },
+  {
+   "t": "MU",
+   "x": 0.6
   },
   {
    "t": "VUZI",
@@ -456,17 +598,13 @@
   {
    "t": "MSFT",
    "x": 0.5
-  },
-  {
-   "t": "NG",
-   "x": 0.5
-  },
-  {
-   "t": "AMZN",
-   "x": 0.4
   }
  ],
  "vol_month": [
+  {
+   "t": "STLN",
+   "x": 2.0
+  },
   {
    "t": "BA",
    "x": 1.5
@@ -494,51 +632,107 @@
   {
    "t": "AMZN",
    "x": 1.2
-  },
-  {
-   "t": "CSX",
-   "x": 1.2
   }
  ],
  "news": {
+  "AAPL": [
+   {
+    "h": "Jim Cramer questions his famous Nvidia investing rule",
+    "u": "https://finnhub.io/api/news?id=594aca04d1b78115209330a14fa7ded656d3c29280611332f46cdf5d863485b2",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Apple Just Hit $5 Trillion. Its \u201cBiggest Competition\u201d Is a SpaceX Phone, Says Gene Munster",
+    "u": "https://finnhub.io/api/news?id=bf9c20852c2f2d53452e0bfa0d494389af1d6afae50cea35f94bb1e66bc5e271",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "TSMC Just Delivered the AI Growth Shock Wall Street Was Waiting For",
+    "u": "https://finnhub.io/api/news?id=8068375ddd495b212dd12bdc6906fa7d64a458de3b2f3c25e5b68c54b6b33f37",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   }
+  ],
   "AMD": [
    {
-    "h": "Anthropic targets valuation of up to $1.4 trillion",
-    "u": "https://finnhub.io/api/news?id=3e331ea2612e0e416f86bdb5226b54ca870911fb54265cb6152e13f8353ab8b0",
+    "h": "Here\u2019s The AMD Data Center Number Investors Need to Know",
+    "u": "https://finnhub.io/api/news?id=c54c3f52e518e91452197488c0de0fafe7f901e3293e6b056668e574aa2ecb01",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "NVIDIA Falls 4% as Board Probe of Jensen Huang Weighs on Shares; AMD and Broadcom Gain 3%",
-    "u": "https://finnhub.io/api/news?id=9eb8bab2722a7e8bfc657e4795f43cc0d8079728fb88826bea7c6622338e01af",
+    "h": "Advanced Micro Devices Stocks Rise 2.66% on $2.5 Billion Anthropic Stake Commitment",
+    "u": "https://finnhub.io/api/news?id=584fcb61a33d5a9da3d73fda79a38091d74aaf3aaa41f2181a465de090ea1dc6",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "Nvidia is the Only Chip Stock in the Red",
-    "u": "https://finnhub.io/api/news?id=83533ec4f415a00576a0b8ebd44dc3ff0deaa01e49fb8ca3d1a5716585cee22c",
+    "h": "Samsung Electronics Stocks Climb 4.74% as Chip Rebound Pushes Shares Near 200,000 Won",
+    "u": "https://finnhub.io/api/news?id=68f368c66b811f5fbe81d5ef65823b5614abb5684d7475b44d451fbc54cb9d75",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   }
+  ],
+  "AMGN": [
+   {
+    "h": "3 Biotech Stocks That Actually Pay Dividends and Keep Raising Them",
+    "u": "https://finnhub.io/api/news?id=d526364b23a781fcc79f45b0452ad07de00efb18c8838e1db66a5e6c31acf58c",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Spdr Dow Jones Industrial Average ETF (DIA) Buys $36 Million More GS on Friday",
+    "u": "https://finnhub.io/api/news?id=de9ee641492486ee72d144c5b24e232ed1622ba8d9dfad7f46506b2b93fb172e",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Amgen\u2019s Repatha shows cost-effectiveness in cardiovascular study",
+    "u": "https://finnhub.io/api/news?id=4c28de14fad0c7ebbff9e571670a435ab843e12b44450b125ac86b2c19ab45ca",
     "s": "Yahoo",
     "d": "Nov 10"
    }
   ],
   "AMZN": [
    {
-    "h": "Amazon reveals major Black Friday change for 2026 shoppers",
-    "u": "https://finnhub.io/api/news?id=55f1d4fdeb961042ec205d6365f7df83c1d170ff7cdb3423fe8809c65b5bc515",
+    "h": "Prediction: Amazon Stock Could Be Poised for Its Next Big Rally in 2027",
+    "u": "https://finnhub.io/api/news?id=44423d8cc3ec2fb846b57db897f903e2c9f2a2bbac10fad5ce9c3e903709e461",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "\u2018Baby Berkshire\u2019 Portfolio: 5 Best AI Stocks to Buy According to Warren Buffett Disciple Tom Gayner",
-    "u": "https://finnhub.io/api/news?id=884f87f4cab048c27e0d958cd4df4d7d5f666642989d58d4dc8349f6a90d8ece",
+    "h": "Anthropic Reveals Stunning $1 Trillion IPO Valuation",
+    "u": "https://finnhub.io/api/news?id=b9d4b6df22a19dfcf8a537ba172a603c2a46677658c663471ab7c81b0ab1065c",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "The Trade Desk Falls 2% as Q3 Beat Fades: \u201cBelow the Level of Growth We Expect\u201d",
-    "u": "https://finnhub.io/api/news?id=00696bb9f02eef512368af0dc4f75acb6550d95bb2b25f412cb0a356d72208b0",
+    "h": "Uber Becomes McDonald\u2019s \u201cPreferred Delivery Partner\u201d in 14 Markets as Its DoorDash Fight Widens",
+    "u": "https://finnhub.io/api/news?id=6852b9909538c46fba8d372f34b42fe6bdfdad245b2040dcfcf746605bc7f8d6",
     "s": "Yahoo",
     "d": "Nov 10"
+   }
+  ],
+  "APTV": [
+   {
+    "h": "Average Analyst Price Target for Aptiv Decreased by 10.52% to $61.98",
+    "u": "https://finnhub.io/api/news?id=4fcb8f2b39d46f2ba9972a77d25055e7295eecb3eb8060f595a15ebdf218b83d",
+    "s": "Fintel",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Aptiv PLC (APTV) is Attracting Investor Attention: Here is What You Should Know",
+    "u": "https://finnhub.io/api/news?id=713491f96b363f8e16e565f056fdd1a91085edeeafe5bc63a757a63db49ae3d8",
+    "s": "Yahoo",
+    "d": "Nov 9"
+   },
+   {
+    "h": "Are Wall Street Analysts Predicting Aptiv Stock Will Climb or Sink?",
+    "u": "https://finnhub.io/api/news?id=8fee585b5144ea99e74231b4d06ed7dc92fb3117d2c5238e8b10bcb431474799",
+    "s": "Yahoo",
+    "d": "Nov 6"
    }
   ],
   "BA": [
@@ -583,20 +777,40 @@
   ],
   "COIN": [
    {
-    "h": "Bitcoin Drops Below $74,000 as Core Inflation Runs Above Forecasts",
-    "u": "https://finnhub.io/api/news?id=4f19d0dbcf70fcbf23d77342b8de73ba83e8a477073c0762ce02a140855a0365",
+    "h": "Coinbase Falls 4%, Robinhood Slides 3% as Hot Inflation Data Drags Bitcoin Lower; Webull Declines 2%",
+    "u": "https://finnhub.io/api/news?id=5ec16cb199e7e03b22c606d4b0a77d8c579f7f692dbf4298d01c80e476e89545",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "PuppyGraph Raises $10M Series A to Help Enterprises Build AI Agents That Query 3,000 Tables in Subseconds",
-    "u": "https://finnhub.io/api/news?id=16671f24aadcae0879a3fc161d2bf8269fcf2c64d30bedd36423f5ca78e844ff",
+    "h": "Coinbase, Kalshi, and Kraken are lawyering up. Here's why.",
+    "u": "https://finnhub.io/api/news?id=7238fc5325b6859f387c183a0de9269dd608454c3340de1af5598eeb3fe668dc",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "Morning Minute: Vitalik Recasts ETH as a Store of Value",
-    "u": "https://finnhub.io/api/news?id=ae7a81f0aa0dede9ebbfec78f05b08a8591658f8d72adaf3b825190d3866a74e",
+    "h": "Sen. Warren targets Trump family crypto firms, and miner MARA sold BTC for $1.1 B",
+    "u": "https://finnhub.io/api/news?id=19a2472c0de081ce23644bd40526ee1647652d9cbc507a22dd5b57dcf40e17b0",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   }
+  ],
+  "CSCO": [
+   {
+    "h": "Is Cisco Systems (CSCO) Fully Priced After Its 104% Run?",
+    "u": "https://finnhub.io/api/news?id=70297f8ff0a3660e4f64d3413000ab52d336126ded888251b7cd15482396a1dc",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "\u2018Baby Berkshire\u2019 Portfolio: 10 Best AI Stocks to Buy According to Warren Buffett Disciple Tom Gayner",
+    "u": "https://finnhub.io/api/news?id=31c8b5d46e44ee2bbe504c93dd4c4faec7605b1488cceda482116c10845714b2",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Schurz Broadband Group Advances its Enterprise Fiber Network with Cisco 8000 Series Next-Generation Routing",
+    "u": "https://finnhub.io/api/news?id=9be8f93f777a7dc7291b8cbe7a9d7a543b63440c171a655e9cc5afd5073afc46",
     "s": "Yahoo",
     "d": "Nov 10"
    }
@@ -623,6 +837,12 @@
   ],
   "DIS": [
    {
+    "h": "Skydance Sinks 9% as Warner Bros. Film Slump Overshadows Earnings Beat; Netflix Falls 2%, Disney Dips",
+    "u": "https://finnhub.io/api/news?id=b30e915e92b76ac889f4852b7effdb6b2f52f5dd4d8af29bca1e0b9662cdb2b7",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
     "h": "Walt Disney (DIS) Reports Next Week: Wall Street Expects Earnings Growth",
     "u": "https://finnhub.io/api/news?id=bca457c57546553a5c6cae76230d8d37530d133b92d1922a89020318f50d7b46",
     "s": "Yahoo",
@@ -633,70 +853,64 @@
     "u": "https://finnhub.io/api/news?id=ba0ab7aa407b8628afda1ffa6ccc8d7106b689f4a1b73022b771c0e2a8768ae3",
     "s": "Yahoo",
     "d": "Nov 10"
-   },
-   {
-    "h": "Skydance: Earnings Numbers Are Meaningless, But New Initiatives Are Transformative",
-    "u": "https://finnhub.io/api/news?id=c5ba2e054fe1f0ee0b9763df4c0b2a49e913c7f6f8d820d086056743b18b1db7",
-    "s": "SeekingAlpha",
-    "d": "Nov 10"
    }
   ],
   "GOOGL": [
    {
-    "h": "Alphabet\u2019s Regulatory Advantage Never Gets Talked About But It Should",
-    "u": "https://finnhub.io/api/news?id=ddb398f2b27c83c21e1d98b167fd7feaf37c3f07004dd1a8e9002cecfac4a965",
+    "h": "Advanced Micro Devices Stocks Rise 2.66% on $2.5 Billion Anthropic Stake Commitment",
+    "u": "https://finnhub.io/api/news?id=584fcb61a33d5a9da3d73fda79a38091d74aaf3aaa41f2181a465de090ea1dc6",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "Nvidia, Alphabet, and Micron Just Agreed to Buy $26 Billion of Stock in One of Their Biggest Customers",
-    "u": "https://finnhub.io/api/news?id=a82fb8f9a830682181d7627c381c0f9c45947d81d6736e75395036207192884f",
+    "h": "Dan Ives Says Wall Street Is Underestimating 2 Major Tech Stocks",
+    "u": "https://finnhub.io/api/news?id=96d24e93d2f80576c555bfef9386a0b0054ff71574e1ed90ec395b316fd76b3c",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "\u2018Baby Berkshire\u2019 Portfolio: 5 Best AI Stocks to Buy According to Warren Buffett Disciple Tom Gayner",
-    "u": "https://finnhub.io/api/news?id=884f87f4cab048c27e0d958cd4df4d7d5f666642989d58d4dc8349f6a90d8ece",
+    "h": "Tesla Bull Predicts Democrats Will \u201cBlock Autonomy,\u201d a Bigger Risk Than Data Centers",
+    "u": "https://finnhub.io/api/news?id=b396b16ca8ff8ee97560e0958bbcf645dfba33baef235c2f16e2ab170ee60a37",
     "s": "Yahoo",
     "d": "Nov 10"
    }
   ],
   "GS": [
    {
-    "h": "Spdr Dow Jones Industrial Average ETF (DIA) Buys $36 Million More GS on Friday",
-    "u": "https://finnhub.io/api/news?id=de9ee641492486ee72d144c5b24e232ed1622ba8d9dfad7f46506b2b93fb172e",
+    "h": "Market Chatter: Goldman, Citigroup Among Banks Committing $270 Million to Stablecoin Venture",
+    "u": "https://finnhub.io/api/news?id=0a0cd1d3949a0f5a3191ae0bbf948620cf20ce96518730e4733ce22b2c95d485",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "AI Could Force 11 Million Americans to Change Careers. At 60, Five More Years Earning $70,000 Could Replace Five Zero Years in Social Security",
-    "u": "https://finnhub.io/api/news?id=c9d8547c62730aae5295a0cd5c156688130d8993d16d1d0a374385928324fe21",
+    "h": "Goldman, Citi join global banks in $270 million stablecoin venture - Bloomberg",
+    "u": "https://finnhub.io/api/news?id=dd2ec58d1189b1ffccbe199c7155a8b42d77ef1e0020a2784ca3b92de66bf97b",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "Goldman Sachs sees something Wall Street may be missing on Nvidia",
-    "u": "https://finnhub.io/api/news?id=122223994a207338d6cb9bf057458cfd628c12b4dd8020e296e27014ddadcd1a",
+    "h": "JPMorgan May Sell $2 Billion of Qualtrics Debt at About 85 Cents on the Dollar",
+    "u": "https://finnhub.io/api/news?id=ca542bd6eb2edad78bcd63894bbcb9651b8ab56460dc4b327b3386d1bd739adc",
     "s": "Yahoo",
     "d": "Nov 10"
    }
   ],
   "HD": [
    {
-    "h": "Home Depot (HD) Reports Next Week: Wall Street Expects Earnings Growth",
-    "u": "https://finnhub.io/api/news?id=57b7e821f71f8d6a145f6af21bcea2d4ec92ca21d2adc5ba3e5eccd47762e234",
+    "h": "Home Depot brings back viral Christmas tree with major holiday upgrade",
+    "u": "https://finnhub.io/api/news?id=1d703f53f1638607f4535fe9f6d976539469b756714a1666ca3b8631ee48f94b",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "OneRail Names Amit Batra SVP of Supply Chain and Nathan Rucker SVP of Strategic Growth & Partnerships",
-    "u": "https://finnhub.io/api/news?id=d405bbdf0ef04b26c089ee1837c56800af4677530b7191c6be416fcca3630d71",
+    "h": "How These 5 Big-Box Retailers Compete for the Same Shopper",
+    "u": "https://finnhub.io/api/news?id=1dc5b277e3c483f221220f6559713d8e745d8a268185c719857d4a6f6c76c939",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "What Moved Best Buy Stock?",
-    "u": "https://finnhub.io/api/news?id=5f744a86cdb36f9d0d2a224ed98afa9d59999aaff871b976a6b18eb8e64ec0ab",
+    "h": "Lerma/ Elevates Taylor To Chief Client Officer",
+    "u": "https://finnhub.io/api/news?id=a5ab49584444646a3115dc9e8c1c38bc91e13bf0b16703ddda728d6ab37e998e",
     "s": "Yahoo",
     "d": "Nov 10"
    }
@@ -723,6 +937,12 @@
   ],
   "KO": [
    {
+    "h": "Why Is WPP (LSE:WPP) Challenging Agency Pitch Rules In Public?",
+    "u": "https://finnhub.io/api/news?id=271767c5a07e2429574bea96dc5f434482fe50dfa034b9a48b3b88d4cb19a93d",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
     "h": "I Bonds Pay 5.51%. Why Retirees Might Still Prefer Dividend Stocks",
     "u": "https://finnhub.io/api/news?id=fc6db5b7a212ecad2470359a1f214dfc0bf8c9cb7238530c60cf2f5f189e08d9",
     "s": "Yahoo",
@@ -731,12 +951,6 @@
    {
     "h": "Meet Wall Street\u2019s Safest Dividend Stocks: 3 Companies That Have Paid Through Recessions, Wars and Market Crashes",
     "u": "https://finnhub.io/api/news?id=e9325f028ccd02e401a70689590025c3987df8a9e3ce172b57a0d3ca66ed7cf3",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Coca-Cola's Dividend Has Grown 64 Years in a Row. I'd Buy It in November and Never Sell.",
-    "u": "https://finnhub.io/api/news?id=9cd78ae00d87e4a7279bd98526c98b626a6e0c30f814bcf70778f535bec62d38",
     "s": "Yahoo",
     "d": "Nov 10"
    }
@@ -821,6 +1035,26 @@
     "d": "Nov 10"
    }
   ],
+  "MU": [
+   {
+    "h": "Micron Cratered Losing 30% in 1 Month: 240% Gains Lie Ahead According to This Wall Street Pro",
+    "u": "https://finnhub.io/api/news?id=a3448b85571083b81e0a971adbb5b0567f1dce57fa1d6a0f46484ecdaa93259d",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Nvidia, Alphabet, and Micron Just Agreed to Buy $26 Billion of Stock in One of Their Biggest Customers",
+    "u": "https://finnhub.io/api/news?id=a82fb8f9a830682181d7627c381c0f9c45947d81d6736e75395036207192884f",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Bank of America Just Dropped These 3 Chip Stocks From Its Favorite Picks",
+    "u": "https://finnhub.io/api/news?id=990fb54e4a4f62bdefa3b52db20934dc53c0246e51d95be405d23de7502b8984",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   }
+  ],
   "NG": [
    {
     "h": "Occidental beats Q3 forecasts as production offsets lower crude prices",
@@ -878,6 +1112,26 @@
     "h": "Why Lucid Stock Keeps Going Up",
     "u": "https://finnhub.io/api/news?id=41c4313dc68c3cd0c260d604d79853f787eafab6cf098aad81b13c79664dbb21",
     "s": "Yahoo",
+    "d": "Nov 10"
+   }
+  ],
+  "O": [
+   {
+    "h": "Democrats Take Congress: 4 Dividend Stocks From Oil to Telecom Worth Buying",
+    "u": "https://finnhub.io/api/news?id=2533aa74d31eba34e39a367139411b7162fcf8d887c637bea96a962d84a82adc",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "5 High Yield REITs That Pay You Tax Free Inside a Roth",
+    "u": "https://finnhub.io/api/news?id=70c00d5c3ea26dc49e2132b02df5ddacf539a0e8fdd13af9d829cc38f41e3b8d",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Realty Income: The Slowing Growth Is Worrying",
+    "u": "https://finnhub.io/api/news?id=51977e30267bb4bdf944a893ccabfaa4cb79439d034cc42c32d94c8bff7b302d",
+    "s": "SeekingAlpha",
     "d": "Nov 10"
    }
   ],
@@ -1001,6 +1255,26 @@
     "d": "Nov 7"
    }
   ],
+  "STLN": [
+   {
+    "h": "BTIG Reiterates Buy on Starling Oncology, Maintains $10 Price Target",
+    "u": "https://finnhub.io/api/news?id=3c3a9c0e6df73fba74fc3d20cdbd30b28d4ab5a2090f968027543a49a590d9c4",
+    "s": "Benzinga",
+    "d": "Nov 9"
+   },
+   {
+    "h": "Lake Street Maintains Buy on Starling Oncology, Lowers Price Target to $8",
+    "u": "https://finnhub.io/api/news?id=429bc245b6127730ba85a980826c948fcd7a1adf4f6270b5371523d9bbe4628f",
+    "s": "Benzinga",
+    "d": "Nov 6"
+   },
+   {
+    "h": "Top US Stock Gainers and Losers in Today's Session",
+    "u": "https://finnhub.io/api/news?id=aa94b8a8ac25e89399457fe1e267c0b0e1fa7b368b0fc9cb3bcc82975e82e49b",
+    "s": "ChartMill",
+    "d": "Nov 6"
+   }
+  ],
   "T": [
    {
     "h": "SpaceX to Build $24B TX Data Center & Gas Plant: Stock Worth a Bet?",
@@ -1068,17 +1342,55 @@
     "s": "Benzinga",
     "d": "Nov 5"
    }
+  ],
+  "ZTS": [
+   {
+    "h": "Zoetis to Participate in the Jefferies Global Healthcare Conference in London",
+    "u": "https://finnhub.io/api/news?id=a5f4e838d963028ff408ad94a9696dd6d95307254d9859d793891f4d14b71a5a",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "ZTS Q3 2026 deep dive: competitive pressures and margin headwinds weigh on outlook",
+    "u": "https://finnhub.io/api/news?id=1dd9809f1330990ca7492a17e3a0fa06ae03fbc3668c0e01a7e350f34698b423",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "ZTS Q3 Earnings Call Highlights Competitive Pressures and Outlook",
+    "u": "https://finnhub.io/api/news?id=27f301916427a41671464334f59c7d433b6130357a09e486ecf8e99fcedaf410",
+    "s": "Yahoo",
+    "d": "Nov 9"
+   }
   ]
  },
  "stocks": {
+  "AAPL": {
+   "name": "AAPL",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
   "AMD": {
    "name": "AMD",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
+  "AMGN": {
+   "name": "AMGN",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
   "AMZN": {
    "name": "AMZN",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "APTV": {
+   "name": "APTV",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -1097,6 +1409,12 @@
   },
   "COIN": {
    "name": "COIN",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "CSCO": {
+   "name": "CSCO",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -1167,6 +1485,12 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
+  "MU": {
+   "name": "MU",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
   "NG": {
    "name": "NG",
    "does": "Details unavailable.",
@@ -1181,6 +1505,12 @@
   },
   "NVDA": {
    "name": "NVDA",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "O": {
+   "name": "O",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -1221,6 +1551,12 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
+  "STLN": {
+   "name": "STLN",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
   "T": {
    "name": "T",
    "does": "Details unavailable.",
@@ -1241,6 +1577,12 @@
   },
   "VUZI": {
    "name": "VUZI",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "ZTS": {
+   "name": "ZTS",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
