@@ -39,6 +39,7 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--acc);outline-offset
 .tag.buy{background:color-mix(in srgb,var(--buy) 18%,transparent);color:var(--buy)}
 .tag.sell{background:color-mix(in srgb,var(--sell) 18%,transparent);color:var(--sell)}
 .meta .both{margin-top:3px;font-size:.78rem;font-weight:600;color:var(--hot)}
+.meta .weak{margin-top:6px;font-size:.78rem;font-weight:600}
 .detail{display:none;padding:0 16px 16px;border-top:1px solid var(--line)}
 .item.open .detail{display:block}
 .detail h3{font-size:.9rem;margin:14px 0 2px}
@@ -71,7 +72,7 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--acc);outline-offset
 <p class="fine">For education only, not financial advice. Politicians can report trades up to 45 days after they happen, so this data is always behind, and a trade doesn’t show why it was made. Rankings show where politicians are active, not where a price is headed. Headlines come from Finnhub and link to their original publishers. A non-commercial hobby project.</p>
 </main>
 <script>
-var D={stocks:{},news:{},trades:[],vol:[],vol_month:[],hot:[]},view="trades",sub="day",flt="all";
+var D={stocks:{},news:{},trades:[],vol:[],vol_month:[],hot:[],window:90},view="trades",sub="day",flt="all";
 var $=function(i){return document.getElementById(i)};
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function money(n){return n>=1e6?"$"+(n/1e6).toFixed(1).replace(/\.0$/,"")+"M":n>=1e3?"$"+Math.round(n/1e3)+"K":"$"+n}
@@ -97,14 +98,14 @@ else if(view==="busy"){var list=sub==="day"?D.vol:D.vol_month;
 H.innerHTML='<div class="chips">'+chip("s","day","Latest trading day",sub==="day")+chip("s","month","Past month",sub==="month")+'</div><p class="note">'+(sub==="day"?"Volume on the latest trading day compared with the stock’s average over the 30 days before.":"Average volume over the past month compared with the three months before it.")+"</p>";
 list.forEach(function(v){var r=byT[v.t];L.appendChild(card("h",'<span class="tick">'+esc(v.t)+'</span><span class="meta"><span class="mult">'+v.x+"× usual volume</span>"+name(v.t)+'<div class="bar"><i style="width:'+Math.min(100,v.x/4*100)+'%"></i></div>'+(r?'<span class="both">A politician also traded this</span>':"")+"</span>",r?"<h3>Politician activity</h3><p>"+esc(r.who)+" reported a "+r.side.toLowerCase()+" ("+esc(r.size)+") on "+esc(r.date)+".</p>":"",v.t))});
 if(!list.length)L.innerHTML='<p class="empty">No data for this view yet. It fills in after the next update.</p>'}
-else{H.innerHTML='<p class="note">Stocks where lawmakers bought more than they sold lately, ranked by how many are buying. Dollar amounts are estimates from the ranges they report.</p>';
+else{H.innerHTML='<p class="note">Stocks where lawmakers bought more than they sold in the last '+D.window+' days, ranked by how many are buying. One lawmaker buying is a weak signal. Several buying the same stock is a stronger pattern, but still not a prediction. Dollar amounts are estimates from the ranges they report.</p>';
 D.hot.forEach(function(h){var pct=Math.round(h.buy/(h.buy+h.sell||1)*100);
-L.appendChild(card("h",'<span class="tick">'+esc(h.t)+'</span><span class="meta"><b>'+h.buyers+" buying · "+h.sellers+" selling</b>"+name(h.t)+"<span>about "+money(h.buy-h.sell)+' more bought than sold</span><div class="two"><i class="g" style="width:'+pct+'%"></i><i class="r" style="width:'+(100-pct)+'%"></i></div></span>',"<h3>The numbers</h3><p>About "+money(h.buy)+" bought and "+money(h.sell)+" sold across recent filings.</p>",h.t))});
+L.appendChild(card("h",'<span class="tick">'+esc(h.t)+'</span><span class="meta"><b>'+h.buyers+" buying · "+h.sellers+" selling</b>"+name(h.t)+"<span>about "+money(h.buy-h.sell)+' more bought than sold</span><div class="two"><i class="g" style="width:'+pct+'%"></i><i class="r" style="width:'+(100-pct)+'%"></i></div>'+(h.buyers<2&&!h.sellers?'<span class="weak">Only one lawmaker is buying</span>':"")+"</span>","<h3>The numbers</h3><p>About "+money(h.buy)+" bought and "+money(h.sell)+" sold across recent filings.</p>",h.t))});
 if(!D.hot.length)L.innerHTML='<p class="empty">No data for this view yet. It fills in after the next update.</p>'}}
 document.querySelector(".tabs").onclick=function(e){var b=e.target.closest("[data-v]");if(b){view=b.dataset.v;render()}};
 $("head").onclick=function(e){var f=e.target.closest("[data-f]"),s=e.target.closest("[data-s]");if(f)flt=f.dataset.f;if(s)sub=s.dataset.s;if(f||s)render()};
 fetch("data.json").then(function(r){return r.json()}).then(function(d){
-D.stocks=d.stocks||{};D.news=d.news||{};D.trades=d.trades||[];D.vol=d.vol||[];D.vol_month=d.vol_month||[];D.hot=d.hot||[];
+D.stocks=d.stocks||{};D.news=d.news||{};D.trades=d.trades||[];D.vol=d.vol||[];D.vol_month=d.vol_month||[];D.hot=d.hot||[];D.window=d.window_days||90;
 var sen=D.trades.some(function(t){return t.who.indexOf("Sen.")===0});
 if(d.sample)$("upd").textContent="Sample data, not real trades.";
 else $("upd").innerHTML="Updated "+esc(d.updated)+". House trades from House Clerk filings"+(sen?'; Senate trades from <a href="https://www.bargo.ai/free-apis/congress" target="_blank" rel="noopener noreferrer">Bargo</a>.':".");
