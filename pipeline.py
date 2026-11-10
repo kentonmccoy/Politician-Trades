@@ -42,6 +42,23 @@ def pdf_text(doc, year):
     with pdfplumber.open(f) as pdf:
         return " ".join((p.extract_text() or "") for p in pdf.pages)
 
+def diagnose(text, rows, who):
+    """Print how well the parser did on one filing, so gaps are visible in the run log."""
+    flat = re.sub(r"\s+", " ", text)
+    found = len(re.findall(r"\[ST\]", flat))
+    if not flat.strip():
+        return "no_text"          # usually a scanned/image PDF
+    if found > len(rows):
+        i = flat.find("[ST]")
+        # show the first stock line the parser did not match
+        for m in re.finditer(r"\[ST\]", flat):
+            seg = flat[max(0, m.start() - 60): m.start() + 110]
+            if not ROW.search(flat[max(0, m.start() - 60): m.start() + 160]):
+                print(f"  MISSED in {who}: {seg!r}")
+                break
+        return "partial"
+    return "ok"
+
 def fetch_house(days=60, limit=80):
     year = dt.date.today().year
     r = requests.get(f"{HOUSE}/financial-pdfs/{year}FD.zip", headers=HEADERS, timeout=120)
@@ -58,18 +75,23 @@ def fetch_house(days=60, limit=80):
             continue
         if filed >= cutoff:
             filings.append((filed, m))
-    trades = []
+    trades, stats = [], {"ok": 0, "partial": 0, "no_text": 0, "error": 0}
+    print(f"House: {len(filings)} filings in the last {days} days")
     for filed, m in sorted(filings, key=lambda x: x[0], reverse=True):
         sd = re.match(r"([A-Z]{2})(\d+)", (m.findtext("StateDst") or "").strip())
         place = "" if not sd else f" ({sd.group(1)}-{int(sd.group(2))})" if int(sd.group(2)) else f" ({sd.group(1)})"
         who = f"Rep. {(m.findtext('First') or '').strip()} {(m.findtext('Last') or '').strip()}{place}"
         try:
-            rows = parse_ptr_text(pdf_text(m.findtext("DocID").strip(), year))
+            text = pdf_text(m.findtext("DocID").strip(), year)
+            rows = parse_ptr_text(text)
         except Exception as e:
-            print("skipped a filing:", e); continue
+            stats["error"] += 1
+            print("skipped a filing:", type(e).__name__, e); continue
+        stats[diagnose(text, rows, who)] += 1
         trades += [{**row, "who": who} for row in rows]
         if len(trades) >= limit:
             break
+    print("House filing results:", stats)
     return trades[:limit]
 
 def volume_leaders(tickers):
