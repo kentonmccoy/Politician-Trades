@@ -390,14 +390,6 @@
   {
    "t": "WBD",
    "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Oct 7",
-   "iso": "2026-10-07",
-   "who": "Rep. David Kustoff (TN-8)"
-  },
-  {
-   "t": "WBD",
-   "side": "Sell",
    "size": "$50,001\u2013$100,000",
    "date": "Oct 7",
    "iso": "2026-10-07",
@@ -802,6 +794,14 @@
    "date": "Sep 28",
    "iso": "2026-09-28",
    "who": "Rep. Gilbert Cisneros (CA-31)"
+  },
+  {
+   "t": "CAT",
+   "side": "Buy",
+   "size": "$1,001\u2013$15,000",
+   "date": "Sep 28",
+   "iso": "2026-09-28",
+   "who": "Rep. Lisa McClain (MI-9)"
   }
  ],
  "hot": [
@@ -879,11 +879,11 @@
  "vol": [
   {
    "t": "TTD",
-   "x": 2.5
+   "x": 2.7
   },
   {
    "t": "NVDA",
-   "x": 2.4
+   "x": 2.5
   },
   {
    "t": "STLN",
@@ -891,23 +891,23 @@
   },
   {
    "t": "AMD",
-   "x": 1.4
+   "x": 1.5
   },
   {
    "t": "CECO",
-   "x": 1.2
+   "x": 1.3
   },
   {
    "t": "AIO",
-   "x": 1.1
+   "x": 1.2
   },
   {
    "t": "COHR",
    "x": 1.0
   },
   {
-   "t": "AVUV",
-   "x": 0.8
+   "t": "FSLR",
+   "x": 0.9
   }
  ],
  "vol_month": [
@@ -1185,26 +1185,6 @@
     "d": "Nov 5"
    }
   ],
-  "AVUV": [
-   {
-    "h": "October CPI Report: Hot Inflation Likely Forces A December Hike",
-    "u": "https://finnhub.io/api/news?id=c5ac95603af472a394e8e7ff5e89d04b6d6768aaf080c4cacd920e2280b73138",
-    "s": "SeekingAlpha",
-    "d": "Nov 10"
-   },
-   {
-    "h": "The Hot October CPI Report May Mean Much Higher Rates And Lower Stocks",
-    "u": "https://finnhub.io/api/news?id=f2f5df4316e0a9d077c5184c0cb65facdfeb296863c95956d9c052e9f42d4cf6",
-    "s": "SeekingAlpha",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Is A 50 Basis Point Hike Back On Table?",
-    "u": "https://finnhub.io/api/news?id=07d0c8e771b914d919ee17baac0ba95418a0e202b4fd2e293705f4e3c843e45b",
-    "s": "SeekingAlpha",
-    "d": "Nov 10"
-   }
-  ],
   "BBIO": [
    {
     "h": "Global Gene Therapy for Hearing Loss Market Report 2026 | Capture Growth to $1.71B by 2030 as Regeneron, Lilly, Sensorion and Astellas Advance AAV, CRISPR and C",
@@ -1277,6 +1257,46 @@
     "u": "https://finnhub.io/api/news?id=59be3a21541dba892e93ca1d8be2b1f355c35475127551fb00424ecef4dff91a",
     "s": "Yahoo",
     "d": "Nov 10"
+   }
+  ],
+  "CAT": [
+   {
+    "h": "The 'Big Short' Investor Locks in Profits on Overlooked Blue-Chip Stock",
+    "u": "https://finnhub.io/api/news?id=c8daf7dc89eae42458dd04aca4fa624e924daf1150521b7505f0a22d3d850c67",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Stock Market Today: Dow Dips On Hot Inflation Data; Nvidia Falls Again, Anthropic Sets IPO Range (Live Coverage)",
+    "u": "https://finnhub.io/api/news?id=da4b6468f7b07843e1b9de42fc190efda0a049a2abd6c729c74866c400d1cd24",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Caterpillar Is the Quiet Winner in Anthropic\u2019s IPO: a $3.4 Billion Generator Order",
+    "u": "https://finnhub.io/api/news?id=4489e0837d39a0d6aba797a446a9cd9ad31dd89374a6b21a09570a3c94749861",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   }
+  ],
+  "CECO": [
+   {
+    "h": "CECO Environmental Corp. 2026 Q3 - Results - Earnings Call Presentation",
+    "u": "https://finnhub.io/api/news?id=22d1dcbe1729a1e7097979598f939d64f3f1f4ae47d2e0c6107549892c66158b",
+    "s": "SeekingAlpha",
+    "d": "Nov 10"
+   },
+   {
+    "h": "What CECO Environmental (CECO) Said on Its Q3 Earnings Call",
+    "u": "https://finnhub.io/api/news?id=4885e00155cb115607ff03bd74f7fc9be1017da92fe9860f408f8cae34bdfa64",
+    "s": "Yahoo",
+    "d": "Nov 9"
+   },
+   {
+    "h": "After a 50% Drop, This \u2018Picks-and-Shovels\u2019 Stock Shows the AI Trade Has Room to Run",
+    "u": "https://finnhub.io/api/news?id=b33b0e941329590b726ccc0bc8ab3376a44987e53c0843aad68bb0dfa8aef5fb",
+    "s": "Yahoo",
+    "d": "Nov 9"
    }
   ],
   "CMG": [
@@ -1531,6 +1551,26 @@
     "u": "https://finnhub.io/api/news?id=96110d60484edfe798091fd0227312e07928ab71a6d9bd2dcf657a3bdad89bf7",
     "s": "Benzinga",
     "d": "Nov 4"
+   }
+  ],
+  "FSLR": [
+   {
+    "h": "US Stock Market Today: S&P 500 Futures Edge Higher On Key CPI Focus",
+    "u": "https://finnhub.io/api/news?id=3838baf3526fcf7abdca58278ac983c7c148e119ca238183621924eff66bf4fe",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "T1 Energy to Release Q3 Earnings: Here's What You Need to Know",
+    "u": "https://finnhub.io/api/news?id=e62601d6eac4f33f2eddc4d7a005260e560d7f33326a3f0c1dfc7c3ff7f136ac",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Nvidia, AMD, CoreWeave, Ionis, DraftKings, and More Stocks That Explain Today\u2019s Market",
+    "u": "https://finnhub.io/api/news?id=df4ae887cc7b016b4b827242c67462e0ce46d0f2138d0b119ab52fb1077de05f",
+    "s": "Yahoo",
+    "d": "Nov 9"
    }
   ],
   "GH": [
@@ -2563,6 +2603,12 @@
   ],
   "TTD": [
    {
+    "h": "The Trade Desk: Value Trap Becomes AI Road Kill (Rating Downgrade)",
+    "u": "https://finnhub.io/api/news?id=f2ba684dc90f04c1613193eb0f2e58b70786d8c51c7380f739dd887e71c24fae",
+    "s": "SeekingAlpha",
+    "d": "Nov 10"
+   },
+   {
     "h": "The Trade Desk: Still A Long Way Before We See The Light (Q3 Review)",
     "u": "https://finnhub.io/api/news?id=937a39bfee77b9d00b5888c9ecde1dd8a5148ec86ba88c98950c368147a53a9f",
     "s": "SeekingAlpha",
@@ -2571,12 +2617,6 @@
    {
     "h": "Evercore ISI Group Maintains In-Line on Trade Desk, Raises Price Target to $18",
     "u": "https://finnhub.io/api/news?id=9fd7eea70fd8993c2bcbe79b97b79f98240aebb6d414250351d00ea2ac4edfea",
-    "s": "Benzinga",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Trade Desk Analysts Boost Their Forecasts After Strong Q3 Results",
-    "u": "https://finnhub.io/api/news?id=564a392664819fc6bc8a91560edd60d17b6f2a35bc6a13b58dc41725abdd88dd",
     "s": "Benzinga",
     "d": "Nov 10"
    }
@@ -2615,9 +2655,9 @@
     "d": "Nov 10"
    },
    {
-    "h": "The Dates That Matter Most For Visa Stock",
-    "u": "https://finnhub.io/api/news?id=536ac43cc6e7adfd3560af0d150fbad1814a97d5d59a039a2cb1837b82c02003",
-    "s": "Yahoo",
+    "h": "Visa: Fairly Valued After Its Run Up (Rating Downgrade)",
+    "u": "https://finnhub.io/api/news?id=619b14b485d016f544062f7f4c3fc3aee3a8b0603f2c50c1f564d49594d25bec",
+    "s": "SeekingAlpha",
     "d": "Nov 10"
    }
   ],
@@ -2889,12 +2929,6 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "AVUV": {
-   "name": "Avantis U.S. Small Cap Value ET",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
   "BBIO": {
    "name": "BridgeBio Pharma, Inc.",
    "does": "Details unavailable.",
@@ -2914,7 +2948,13 @@
    "weigh": "Single stocks are riskier than funds that hold many."
   },
   "BRK.B": {
-   "name": "BRK.B",
+   "name": "Berkshire Hathaway Inc. New",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "CAT": {
+   "name": "Caterpillar, Inc.",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -2999,6 +3039,12 @@
   },
   "FMAO": {
    "name": "Farmers & Merchants Bancorp, In",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "FSLR": {
+   "name": "First Solar, Inc.",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -3112,7 +3158,7 @@
    "weigh": "Single stocks are riskier than funds that hold many."
   },
   "MOG.A": {
-   "name": "MOG.A",
+   "name": "Moog Inc.",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
