@@ -20,7 +20,7 @@ h1{font-size:2.2rem;line-height:1.05;margin:0 0 6px;font-weight:800;letter-spaci
 .tabs{display:flex;gap:4px;background:var(--tint);padding:4px;border-radius:14px;margin-bottom:16px;position:sticky;top:env(safe-area-inset-top,0px);z-index:2}
 .tabs button{flex:1;border:0;background:transparent;color:var(--mute);font:600 .92rem "Schibsted Grotesk",system-ui,sans-serif;padding:11px 6px;border-radius:10px;cursor:pointer}
 .tabs button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(20,33,61,.18)}
-button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+button:focus-visible,a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .note{color:var(--mute);font-size:.9rem;margin:0 0 12px;max-width:60ch}
 .chips{display:flex;gap:8px;margin:0 0 12px;flex-wrap:wrap}
 .chip{border:1px solid var(--line);background:var(--card);color:var(--mute);font:600 .85rem "Schibsted Grotesk",system-ui,sans-serif;padding:7px 14px;border-radius:99px;cursor:pointer}
@@ -43,6 +43,10 @@ button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .detail h3{font-size:.9rem;margin:14px 0 2px}
 .detail p{margin:0;font-size:.95rem}
 .detail .soon{color:var(--mute);margin-top:14px}
+.news{list-style:none;margin:6px 0 0;padding:0}
+.news li{margin:0 0 9px;font-size:.92rem}
+.news a{color:var(--acc)}
+.news span{display:block;color:var(--mute);font-size:.78rem}
 .bar,.two{height:8px;border-radius:6px;background:var(--tint);margin-top:8px;overflow:hidden;display:flex}
 .bar i,.two i{display:block;height:100%}
 .bar i{background:var(--hot)}.two .g{background:var(--buy)}.two .r{background:var(--sell)}
@@ -63,16 +67,19 @@ button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 </div>
 <div id="head"></div>
 <div id="list"></div>
-<p class="fine">For education only, not financial advice. Politicians can report trades up to 45 days after they happen, so this data is always behind, and a trade doesn’t show why it was made. Rankings show where politicians are active, not where a price is headed.</p>
+<p class="fine">For education only, not financial advice. Politicians can report trades up to 45 days after they happen, so this data is always behind, and a trade doesn’t show why it was made. Rankings show where politicians are active, not where a price is headed. Headlines come from Finnhub and link to their original publishers.</p>
 </main>
 <script>
-var D={stocks:{},trades:[],vol:[],vol_month:[],hot:[]},view="trades",sub="day",flt="all";
+var D={stocks:{},news:{},trades:[],vol:[],vol_month:[],hot:[]},view="trades",sub="day",flt="all";
 var $=function(i){return document.getElementById(i)};
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function money(n){return n>=1e6?"$"+(n/1e6).toFixed(1).replace(/\.0$/,"")+"M":n>=1e3?"$"+Math.round(n/1e3)+"K":"$"+n}
 function name(tk){var s=D.stocks[tk];return s&&s.name&&s.name!==tk?'<span class="co">'+esc(s.name)+'</span>':""}
-function blurb(tk){var s=D.stocks[tk];if(!s||s.does==="Details unavailable.")return'<p class="soon">Plain-English notes aren’t turned on yet.</p>';
-return"<h3>What the company does</h3><p>"+esc(s.does)+"</p><h3>Why it may be active</h3><p>"+esc(s.why)+"</p><h3>Things to weigh</h3><p>"+esc(s.weigh)+"</p>"}
+function headlines(tk){var n=(D.news[tk]||[]).filter(function(x){return /^https?:\/\//.test(x.u)});if(!n.length)return"";
+return"<h3>Recent headlines</h3><ul class=\"news\">"+n.map(function(x){return'<li><a href="'+esc(x.u)+'" target="_blank" rel="noopener noreferrer">'+esc(x.h)+"</a><span>"+esc([x.s,x.d].filter(Boolean).join(" · "))+"</span></li>"}).join("")+"</ul>"}
+function blurb(tk){var s=D.stocks[tk],h=headlines(tk);
+if(!s||s.does==="Details unavailable.")return'<p class="soon">Plain-English notes aren’t turned on yet.</p>'+h;
+return"<h3>What the company does</h3><p>"+esc(s.does)+"</p><h3>Why it may be active</h3><p>"+esc(s.why)+"</p><h3>Things to weigh</h3><p>"+esc(s.weigh)+"</p>"+h}
 function card(cls,inner,extra,tk){var d=document.createElement("div");d.className="item "+cls;
 d.innerHTML='<button class="row" aria-expanded="false">'+inner+'</button><div class="detail">'+(extra||"")+blurb(tk)+"</div>";
 var b=d.querySelector(".row");b.onclick=function(){b.setAttribute("aria-expanded",d.classList.toggle("open"))};return d}
@@ -96,7 +103,7 @@ if(!D.hot.length)L.innerHTML='<p class="empty">No data for this view yet. It fil
 document.querySelector(".tabs").onclick=function(e){var b=e.target.closest("[data-v]");if(b){view=b.dataset.v;render()}};
 $("head").onclick=function(e){var f=e.target.closest("[data-f]"),s=e.target.closest("[data-s]");if(f)flt=f.dataset.f;if(s)sub=s.dataset.s;if(f||s)render()};
 fetch("data.json").then(function(r){return r.json()}).then(function(d){
-D.stocks=d.stocks||{};D.trades=d.trades||[];D.vol=d.vol||[];D.vol_month=d.vol_month||[];D.hot=d.hot||[];
+D.stocks=d.stocks||{};D.news=d.news||{};D.trades=d.trades||[];D.vol=d.vol||[];D.vol_month=d.vol_month||[];D.hot=d.hot||[];
 $("upd").textContent=d.sample?"Sample data, not real trades.":"Updated "+d.updated+" from House Clerk filings.";render()})
 .catch(function(){$("upd").textContent="Couldn’t load data.json.";});
 </script>
