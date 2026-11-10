@@ -20,3 +20,13 @@ def test_other_column_orders():
         ("AAPL", "Buy", "$1,001–$15,000", "2026-08-13"),
         ("ABT", "Sell", "$50,001–$100,000", "2026-10-02"),
         ("NVDA", "Sell", "$1,001–$15,000", "2026-09-25")]
+
+def test_name_inside_amount_and_cents():
+    t = (f"S 10/07/2026 10/07/2026 $50,001 - A Common Stock (WBD) [ST] $100,000 F{N} S{N}: New D{N}: Cash from merger "
+         f"Common P 09/29/2026 10/29/2026 $710.52 Stock (HONA) [ST] F{N} S{N}: New "
+         f"SP Amgen (AMGN) P 09/22/2026 10/01/2026 $1,001 - $15,000 [ST] F{N} S{N}: New")
+    misses = []
+    r = parse_ptr_text(t, misses)
+    assert [(x["t"], x["side"], x["size"]) for x in r] == [
+        ("WBD", "Sell", "$50,001–$100,000"), ("HONA", "Buy", "$710.52"), ("AMGN", "Buy", "$1,001–$15,000")]
+    assert misses == []
