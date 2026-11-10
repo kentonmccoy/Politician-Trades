@@ -20,20 +20,22 @@ PROMPT = ("You explain stocks to complete beginners. Reply with ONLY a JSON obje
           "Never say to buy or sell. The user message is a ticker symbol.")
 
 TICK = re.compile(r"\(([A-Z][A-Z.\-]{0,5})\)")
-FIELDS = re.compile(r"\b(P|S(?: \(partial\))?)\s+(\d{2}/\d{2}/\d{4})\s+\d{2}/\d{2}/\d{4}\s+"
-                    r"(\$[\d,]+\s*-\s*\$[\d,]+|Over \$[\d,]+)")
+TAG = re.compile(r"\[[A-Z]{2}\]")
+AMT = r"\$[\d,]+\s*-\s*[^$]{0,80}?\$[\d,]+|Over \$[\d,]+|\$[\d,]+\.\d\d"
+FIELDS = re.compile(r"\b(P|S(?: \(partial\))?)\s+(\d{2}/\d{2}/\d{4})\s+\d{2}/\d{2}/\d{4}\s+(" + AMT + ")")
 
 def _row(tk, kind, tdate, amt):
     d = dt.datetime.strptime(tdate, "%m/%d/%Y")
-    return {"t": tk, "side": "Buy" if kind == "P" else "Sell",
-            "size": re.sub(r"\s*-\s*", "–", amt), "date": d.strftime("%b ") + str(d.day),
-            "iso": d.date().isoformat()}
+    m = re.findall(r"\$[\d,]+(?:\.\d\d)?", amt)
+    size = f"{m[0]}–{m[-1]}" if len(m) > 1 else (m[0] if m else amt)
+    return {"t": tk, "side": "Buy" if kind == "P" else "Sell", "size": size,
+            "date": d.strftime("%b ") + str(d.day), "iso": d.date().isoformat()}
 
-def parse_ptr_text(text):
+def parse_ptr_text(text, misses=None):
     """Pull stock transactions out of the text of one House PTR filing.
     Filings lay the columns out in different orders (the ticker can sit before or after the
-    type, dates and amount, and the amount can be split by the ticker), so besides the plain
-    pattern we also read each row on its own: rows end at the 'F S: New' marker."""
+    type, dates and amount, and the amount can be split by the ticker or asset name), so besides
+    the plain pattern we read each [ST] row on its own. Lines we could not read go in `misses`."""
     text = re.sub(r"\s+", " ", text.replace("\x00", ""))
     rows, seen = [], set()
     def add(r):
@@ -42,18 +44,23 @@ def parse_ptr_text(text):
             seen.add(k); rows.append(r)
     for tk, kind, tdate, _notified, amt in ROW.findall(text):
         add(_row(tk, kind, tdate, amt))
-    for chunk in re.split(r"\bF\s+S:\s*\w+", text):
-        if chunk.count("[ST]") != 1 or len(re.findall(r"\[[A-Z]{2}\]", chunk)) != 1:
+    prev = 0
+    for m in TAG.finditer(text):
+        start, prev = prev, m.end()
+        ends = list(re.finditer(r"\bF\s+S:\s*\w+", text[start:m.start()]))
+        if ends:
+            start += ends[-1].end()   # a row's fields never start before the previous row's end marker
+        region = text[start:m.end() + 20]
+        if m.group() != "[ST]":
             continue
-        before = chunk[:chunk.index("[ST]")]
-        ticks = TICK.findall(before)
-        if not ticks:
-            continue
-        clean = re.sub(r"\s+", " ", TICK.sub(" ", chunk).replace("[ST]", " "))
+        ticks = TICK.findall(text[start:m.start()])
+        clean = re.sub(r"\s+", " ", TICK.sub(" ", region).replace("[ST]", " "))
         found = FIELDS.findall(clean)
-        if found:
+        if ticks and found:
             kind, tdate, amt = found[-1]
             add(_row(ticks[-1], kind[0], tdate, amt))
+        elif misses is not None and not any(r["t"] in text[start:m.end()] for r in rows):
+            misses.append(text[max(0, m.start() - 120): m.end() + 60])
     return rows
 
 def pdf_text(doc, year):
@@ -68,19 +75,13 @@ def pdf_text(doc, year):
     with pdfplumber.open(f) as pdf:
         return " ".join((p.extract_text() or "") for p in pdf.pages)
 
-def diagnose(text, rows, who):
-    """Print how well the parser did on one filing, so gaps are visible in the run log."""
-    flat = re.sub(r"\s+", " ", text)
-    found = len(re.findall(r"\[ST\]", flat))
+def diagnose(text, rows, who, misses):
+    """Say how well the parser did on one filing, so gaps are visible in the run log."""
+    flat = re.sub(r"\s+", " ", text.replace("\x00", ""))
     if not flat.strip():
         return "no_text"          # usually a scanned/image PDF
-    if found > len(rows):
-        covered = [mm.span() for mm in ROW.finditer(flat)]
-        # show the first stock line the parser did not match
-        for m in re.finditer(r"\[ST\]", flat):
-            if not any(a <= m.start() < b for a, b in covered):
-                print(f"  MISSED in {who}: {flat[max(0, m.start() - 60): m.start() + 110]!r}")
-                break
+    if misses:
+        print(f"  MISSED in {who}: {misses[0]!r}")
         return "partial"
     return "ok"
 
@@ -108,11 +109,12 @@ def fetch_house(days=60, limit=80):
         who = f"Rep. {(m.findtext('First') or '').strip()} {(m.findtext('Last') or '').strip()}{place}"
         try:
             text = pdf_text(m.findtext("DocID").strip(), year)
-            rows = parse_ptr_text(text)
+            misses = []
+            rows = parse_ptr_text(text, misses)
         except Exception as e:
             stats["error"] += 1
             print("skipped a filing:", type(e).__name__, e); continue
-        stats[diagnose(text, rows, who)] += 1
+        stats[diagnose(text, rows, who, misses)] += 1
         trades += [{**row, "who": who} for row in rows]
         if len(trades) >= limit:
             break
