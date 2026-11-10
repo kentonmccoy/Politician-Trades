@@ -1,7 +1,8 @@
 """Builds docs/data.json: recent House trades, busy stocks (latest day + past month),
-and a ranking of stocks politicians are net buying."""
+a ranking of stocks politicians are net buying, plus headlines and plain-English notes."""
 import datetime as dt, json, re
-from pipeline import OUT, WATCH, fetch_house, blurbs
+from pipeline import OUT, WATCH, fetch_house
+from news import fetch_news, news_blurbs
 
 def dollars(size):
     nums = [int(n.replace(",", "")) for n in re.findall(r"\$([\d,]+)", size)]
@@ -47,12 +48,14 @@ def main():
     day, month = volume_both(sorted({t["t"] for t in trades} | set(WATCH)))
     hot = hot_stocks(trades)
     shown = trades[:100]
-    needed = {t["t"] for t in shown} | {v["t"] for v in day + month} | {h["t"] for h in hot}
+    tickers = sorted({t["t"] for t in shown} | {v["t"] for v in day + month} | {h["t"] for h in hot})
+    news = fetch_news(tickers)
     OUT.mkdir(exist_ok=True)
     (OUT / "data.json").write_text(json.dumps(
         {"sample": False, "updated": dt.date.today().strftime("%b %d, %Y"), "trades": shown,
-         "hot": hot, "vol": day, "vol_month": month, "stocks": blurbs(sorted(needed))}, indent=1))
-    print(f"Wrote docs/data.json with {len(shown)} trades, {len(hot)} hot stocks.")
+         "hot": hot, "vol": day, "vol_month": month, "news": news,
+         "stocks": news_blurbs(tickers, news)}, indent=1))
+    print(f"Wrote docs/data.json: {len(shown)} trades, {len(hot)} hot stocks, headlines for {len(news)} tickers.")
 
 if __name__ == "__main__":
     main()
