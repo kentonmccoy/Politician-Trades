@@ -5,6 +5,7 @@ import datetime as dt, io, json, os, re, time, zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
 import requests
+from scans import read_scan
 
 OUT, CACHE = Path("docs"), Path("cache")
 MODEL = "claude-haiku-5-5"   # cheap and fast; change if you like
@@ -78,19 +79,6 @@ def pdf_text(doc, year):
     with pdfplumber.open(pdf_file(doc, year)) as pdf:
         return " ".join((p.extract_text() or "") for p in pdf.pages)
 
-def fix_ocr(text):
-    """Undo the most common OCR slips that would break the strict row pattern."""
-    text = re.sub(r"[\[(]\s*S\s*T\s*[\])]", "[ST]", text)
-    return re.sub(r"[\u2010-\u2015\u2212]", "-", text)
-
-def ocr_text(f):
-    """Read a scanned (image-only) PDF with Tesseract. Only used when a filing has no text."""
-    import pdfplumber, pytesseract
-    with pdfplumber.open(f) as pdf:
-        pages = [pytesseract.image_to_string(p.to_image(resolution=300).original, config="--psm 6")
-                 for p in pdf.pages]
-    return fix_ocr(" ".join(pages))
-
 def diagnose(text, rows, who, misses):
     """Say how well the parser did on one filing, so gaps are visible in the run log."""
     flat = re.sub(r"\s+", " ", text.replace("\x00", ""))
@@ -117,7 +105,7 @@ def fetch_house(days=60, limit=80):
             continue
         if filed >= cutoff:
             filings.append((filed, m))
-    trades, stats = [], {"ok": 0, "partial": 0, "no_text": 0, "error": 0, "scan_read": 0, "scan_empty": 0}
+    trades, stats = [], {"ok": 0, "partial": 0, "no_text": 0, "error": 0, "scan_read": 0, "scan_empty": 0, "scan_failed": 0}
     print(f"House: {len(filings)} filings in the last {days} days")
     for filed, m in sorted(filings, key=lambda x: x[0], reverse=True):
         sd = re.match(r"([A-Z]{2})(\d+)", (m.findtext("StateDst") or "").strip())
@@ -126,17 +114,19 @@ def fetch_house(days=60, limit=80):
         try:
             doc = m.findtext("DocID").strip()
             text = pdf_text(doc, year)
-            misses, scan = [], False
-            if not text.strip():          # image-only filing: try OCR, and mark what comes out of it
-                scan, text = True, ocr_text(pdf_file(doc, year))
-            rows = parse_ptr_text(text, misses)
+            misses, scan = [], not text.strip()
+            if scan:                      # image-only filing: have Claude read the page images
+                got = read_scan(pdf_file(doc, year), doc)
+                rows = [{**_row(tk, k[0], d, a), "scan": True} for tk, k, d, a in (got or [])]
+                status = "scan_failed" if got is None else "scan_read" if rows else "scan_empty"
+            else:
+                rows = parse_ptr_text(text, misses)
         except Exception as e:
             stats["error"] += 1
             print("skipped a filing:", type(e).__name__, e); continue
         if scan:
-            stats["scan_read" if rows else "scan_empty"] += 1
-            print(f"  SCAN {who}: OCR read {len(rows)} rows; text starts {' '.join(text.split())[:140]!r}")
-            rows = [{**r, "scan": True} for r in rows]
+            stats[status] += 1
+            print(f"  SCAN {who}: {status.replace('_', ' ')} ({len(rows)} rows)")
         else:
             stats[diagnose(text, rows, who, misses)] += 1
         trades += [{**row, "who": who} for row in rows]
