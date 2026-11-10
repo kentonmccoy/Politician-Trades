@@ -17,6 +17,7 @@ main{max-width:680px;margin:0 auto;padding:24px 16px 56px}
 h1{font-size:2.2rem;line-height:1.05;margin:0 0 6px;font-weight:800;letter-spacing:-.02em}
 .sub{color:var(--mute);margin:0 0 4px}
 .upd{color:var(--mute);font-size:.82rem;margin:0 0 18px}
+.upd a{color:var(--acc)}
 .tabs{display:flex;gap:4px;background:var(--tint);padding:4px;border-radius:14px;margin-bottom:16px;position:sticky;top:env(safe-area-inset-top,0px);z-index:2}
 .tabs button{flex:1;border:0;background:transparent;color:var(--mute);font:600 .92rem "Schibsted Grotesk",system-ui,sans-serif;padding:11px 6px;border-radius:10px;cursor:pointer}
 .tabs button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(20,33,61,.18)}
@@ -67,7 +68,7 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--acc);outline-offset
 </div>
 <div id="head"></div>
 <div id="list"></div>
-<p class="fine">For education only, not financial advice. Politicians can report trades up to 45 days after they happen, so this data is always behind, and a trade doesn’t show why it was made. Rankings show where politicians are active, not where a price is headed. Headlines come from Finnhub and link to their original publishers.</p>
+<p class="fine">For education only, not financial advice. Politicians can report trades up to 45 days after they happen, so this data is always behind, and a trade doesn’t show why it was made. Rankings show where politicians are active, not where a price is headed. Headlines come from Finnhub and link to their original publishers. A non-commercial hobby project.</p>
 </main>
 <script>
 var D={stocks:{},news:{},trades:[],vol:[],vol_month:[],hot:[]},view="trades",sub="day",flt="all";
@@ -88,7 +89,7 @@ function render(){var L=$("list"),H=$("head");L.innerHTML="";
 document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.v===view)});
 var busy={},byT={};D.vol.concat(D.vol_month).forEach(function(v){busy[v.t]=1});D.trades.forEach(function(r){if(!byT[r.t])byT[r.t]=r});
 if(view==="trades"){var ppl={};D.trades.forEach(function(r){ppl[r.who]=1});
-H.innerHTML='<p class="note">'+D.trades.length+" recent trades from "+Object.keys(ppl).length+" House members. Tap a trade to learn about the stock.</p><div class=\"chips\">"+chip("f","all","All",flt==="all")+chip("f","Buy","Buys",flt==="Buy")+chip("f","Sell","Sells",flt==="Sell")+"</div>";
+H.innerHTML='<p class="note">'+D.trades.length+" recent trades from "+Object.keys(ppl).length+" lawmakers. Tap a trade to learn about the stock.</p><div class=\"chips\">"+chip("f","all","All",flt==="all")+chip("f","Buy","Buys",flt==="Buy")+chip("f","Sell","Sells",flt==="Sell")+"</div>";
 var rows=D.trades.filter(function(r){return flt==="all"||r.side===flt});
 rows.forEach(function(r){L.appendChild(card(r.side==="Buy"?"b":"s",'<span class="tick">'+esc(r.t)+'</span><span class="meta"><b>'+esc(r.who)+"</b>"+name(r.t)+"<span>"+esc(r.size)+" · "+esc(r.date)+"</span>"+(busy[r.t]?'<span class="both">Also unusually busy lately</span>':"")+'</span><span class="tag '+r.side.toLowerCase()+'">'+r.side+"</span>","",r.t))});
 if(!rows.length)L.innerHTML='<p class="empty">No trades to show yet.</p>'}
@@ -96,7 +97,7 @@ else if(view==="busy"){var list=sub==="day"?D.vol:D.vol_month;
 H.innerHTML='<div class="chips">'+chip("s","day","Latest trading day",sub==="day")+chip("s","month","Past month",sub==="month")+'</div><p class="note">'+(sub==="day"?"Volume on the latest trading day compared with the stock’s average over the 30 days before.":"Average volume over the past month compared with the three months before it.")+"</p>";
 list.forEach(function(v){var r=byT[v.t];L.appendChild(card("h",'<span class="tick">'+esc(v.t)+'</span><span class="meta"><span class="mult">'+v.x+"× usual volume</span>"+name(v.t)+'<div class="bar"><i style="width:'+Math.min(100,v.x/4*100)+'%"></i></div>'+(r?'<span class="both">A politician also traded this</span>':"")+"</span>",r?"<h3>Politician activity</h3><p>"+esc(r.who)+" reported a "+r.side.toLowerCase()+" ("+esc(r.size)+") on "+esc(r.date)+".</p>":"",v.t))});
 if(!list.length)L.innerHTML='<p class="empty">No data for this view yet. It fills in after the next update.</p>'}
-else{H.innerHTML='<p class="note">Stocks where House members bought more than they sold lately, ranked by how many are buying. Dollar amounts are estimates from the ranges they report.</p>';
+else{H.innerHTML='<p class="note">Stocks where lawmakers bought more than they sold lately, ranked by how many are buying. Dollar amounts are estimates from the ranges they report.</p>';
 D.hot.forEach(function(h){var pct=Math.round(h.buy/(h.buy+h.sell||1)*100);
 L.appendChild(card("h",'<span class="tick">'+esc(h.t)+'</span><span class="meta"><b>'+h.buyers+" buying · "+h.sellers+" selling</b>"+name(h.t)+"<span>about "+money(h.buy-h.sell)+' more bought than sold</span><div class="two"><i class="g" style="width:'+pct+'%"></i><i class="r" style="width:'+(100-pct)+'%"></i></div></span>',"<h3>The numbers</h3><p>About "+money(h.buy)+" bought and "+money(h.sell)+" sold across recent filings.</p>",h.t))});
 if(!D.hot.length)L.innerHTML='<p class="empty">No data for this view yet. It fills in after the next update.</p>'}}
@@ -104,7 +105,10 @@ document.querySelector(".tabs").onclick=function(e){var b=e.target.closest("[dat
 $("head").onclick=function(e){var f=e.target.closest("[data-f]"),s=e.target.closest("[data-s]");if(f)flt=f.dataset.f;if(s)sub=s.dataset.s;if(f||s)render()};
 fetch("data.json").then(function(r){return r.json()}).then(function(d){
 D.stocks=d.stocks||{};D.news=d.news||{};D.trades=d.trades||[];D.vol=d.vol||[];D.vol_month=d.vol_month||[];D.hot=d.hot||[];
-$("upd").textContent=d.sample?"Sample data, not real trades.":"Updated "+d.updated+" from House Clerk filings.";render()})
+var sen=D.trades.some(function(t){return t.who.indexOf("Sen.")===0});
+if(d.sample)$("upd").textContent="Sample data, not real trades.";
+else $("upd").innerHTML="Updated "+esc(d.updated)+". House trades from House Clerk filings"+(sen?'; Senate trades from <a href="https://www.bargo.ai/free-apis/congress" target="_blank" rel="noopener noreferrer">Bargo</a>.':".");
+render()})
 .catch(function(){$("upd").textContent="Couldn’t load data.json.";});
 </script>
 </body>
