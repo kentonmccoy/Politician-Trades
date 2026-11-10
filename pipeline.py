@@ -49,12 +49,11 @@ def diagnose(text, rows, who):
     if not flat.strip():
         return "no_text"          # usually a scanned/image PDF
     if found > len(rows):
-        i = flat.find("[ST]")
+        covered = [mm.span() for mm in ROW.finditer(flat)]
         # show the first stock line the parser did not match
         for m in re.finditer(r"\[ST\]", flat):
-            seg = flat[max(0, m.start() - 60): m.start() + 110]
-            if not ROW.search(flat[max(0, m.start() - 60): m.start() + 160]):
-                print(f"  MISSED in {who}: {seg!r}")
+            if not any(a <= m.start() < b for a, b in covered):
+                print(f"  MISSED in {who}: {flat[max(0, m.start() - 60): m.start() + 110]!r}")
                 break
         return "partial"
     return "ok"
