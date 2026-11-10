@@ -60,6 +60,22 @@
    "who": "Rep. Maria Elvira Salazar (FL-27)"
   },
   {
+   "t": "ASML",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 23",
+   "iso": "2026-10-23",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
+   "t": "STX",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 23",
+   "iso": "2026-10-23",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
    "t": "HD",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
@@ -68,9 +84,25 @@
    "who": "Rep. Pete Sessions (TX-17)"
   },
   {
+   "t": "LOW",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 22",
+   "iso": "2026-10-22",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
    "t": "PEP",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
+   "date": "Oct 21",
+   "iso": "2026-10-21",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
+   "t": "REZI",
+   "side": "Sell",
+   "size": "$344.99",
    "date": "Oct 21",
    "iso": "2026-10-21",
    "who": "Rep. Pete Sessions (TX-17)"
@@ -212,6 +244,14 @@
    "who": "Rep. David J. Taylor (OH-2)"
   },
   {
+   "t": "BRK.B",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 15",
+   "iso": "2026-10-15",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
    "t": "MSFT",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
@@ -228,6 +268,14 @@
    "who": "Sen. Sheldon Whitehouse (RI)"
   },
   {
+   "t": "TXN",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 14",
+   "iso": "2026-10-14",
+   "who": "Rep. Kevin Hern (OK-1)"
+  },
+  {
    "t": "CVX",
    "side": "Sell",
    "size": "$15,001\u2013$50,000",
@@ -241,6 +289,14 @@
    "size": "$1,001\u2013$15,000",
    "date": "Oct 14",
    "iso": "2026-10-14",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
+   "t": "COST",
+   "side": "Sell",
+   "size": "$100,001\u2013$250,000",
+   "date": "Oct 13",
+   "iso": "2026-10-13",
    "who": "Rep. Pete Sessions (TX-17)"
   },
   {
@@ -340,6 +396,14 @@
    "who": "Rep. David Kustoff (TN-8)"
   },
   {
+   "t": "WBD",
+   "side": "Sell",
+   "size": "$50,001\u2013$100,000",
+   "date": "Oct 7",
+   "iso": "2026-10-07",
+   "who": "Rep. Nancy Pelosi (CA-11)"
+  },
+  {
    "t": "TJX",
    "side": "Sell",
    "size": "$15,001\u2013$50,000",
@@ -388,6 +452,46 @@
    "who": "Rep. Pete Sessions (TX-17)"
   },
   {
+   "t": "CMG",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 2",
+   "iso": "2026-10-02",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
+   "t": "COST",
+   "side": "Sell",
+   "size": "$250,001\u2013$500,000",
+   "date": "Oct 2",
+   "iso": "2026-10-02",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
+   "t": "MA",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 2",
+   "iso": "2026-10-02",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
+   "t": "MCD",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 2",
+   "iso": "2026-10-02",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
+   "t": "MSFT",
+   "side": "Sell",
+   "size": "$250,001\u2013$500,000",
+   "date": "Oct 2",
+   "iso": "2026-10-02",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
    "t": "NVDA",
    "side": "Sell",
    "size": "$15,001\u2013$50,000",
@@ -396,7 +500,23 @@
    "who": "Rep. Pete Sessions (TX-17)"
   },
   {
+   "t": "SBUX",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 2",
+   "iso": "2026-10-02",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
    "t": "TSLA",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 2",
+   "iso": "2026-10-02",
+   "who": "Rep. Pete Sessions (TX-17)"
+  },
+  {
+   "t": "VZ",
    "side": "Sell",
    "size": "$15,001\u2013$50,000",
    "date": "Oct 2",
@@ -444,6 +564,14 @@
    "who": "Rep. Cleo Fields (LA-6)"
   },
   {
+   "t": "BHE",
+   "side": "Buy",
+   "size": "$15,001\u2013$50,000",
+   "date": "Oct 1",
+   "iso": "2026-10-01",
+   "who": "Rep. Gilbert Cisneros (CA-31)"
+  },
+  {
    "t": "JNJ",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
@@ -476,12 +604,28 @@
    "who": "Rep. Lisa McClain (MI-9)"
   },
   {
+   "t": "STX",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 30",
+   "iso": "2026-09-30",
+   "who": "Rep. Lisa McClain (MI-9)"
+  },
+  {
    "t": "ESAB",
    "side": "Buy",
    "size": "$1,001\u2013$15,000",
    "date": "Sep 29",
    "iso": "2026-09-29",
    "who": "Rep. Thomas H. Kean (NJ-7)"
+  },
+  {
+   "t": "HONA",
+   "side": "Sell",
+   "size": "$710.52",
+   "date": "Sep 29",
+   "iso": "2026-09-29",
+   "who": "Rep. Carol Devine Miller (WV-1)"
   },
   {
    "t": "ITT",
@@ -556,6 +700,14 @@
    "who": "Rep. Gilbert Cisneros (CA-31)"
   },
   {
+   "t": "MTSI",
+   "side": "Sell",
+   "size": "$15,001\u2013$50,000",
+   "date": "Sep 29",
+   "iso": "2026-09-29",
+   "who": "Rep. Gilbert Cisneros (CA-31)"
+  },
+  {
    "t": "OXM",
    "side": "Sell",
    "size": "$1,001\u2013$15,000",
@@ -604,9 +756,25 @@
    "who": "Rep. Gilbert Cisneros (CA-31)"
   },
   {
+   "t": "DDOG",
+   "side": "Buy",
+   "size": "$50,001\u2013$100,000",
+   "date": "Sep 28",
+   "iso": "2026-09-28",
+   "who": "Rep. Jonathan Jackson (IL-1)"
+  },
+  {
    "t": "EL",
    "side": "Buy",
    "size": "$50,001\u2013$100,000",
+   "date": "Sep 28",
+   "iso": "2026-09-28",
+   "who": "Rep. Jonathan Jackson (IL-1)"
+  },
+  {
+   "t": "GH",
+   "side": "Buy",
+   "size": "$15,001\u2013$50,000",
    "date": "Sep 28",
    "iso": "2026-09-28",
    "who": "Rep. Jonathan Jackson (IL-1)"
@@ -628,180 +796,12 @@
    "who": "Rep. Jonathan Jackson (IL-1)"
   },
   {
-   "t": "CAT",
+   "t": "ON",
    "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 28",
-   "iso": "2026-09-28",
-   "who": "Rep. Lisa McClain (MI-9)"
-  },
-  {
-   "t": "IBRX",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 28",
-   "iso": "2026-09-28",
-   "who": "Rep. Lisa McClain (MI-9)"
-  },
-  {
-   "t": "MSFT",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 28",
-   "iso": "2026-09-28",
-   "who": "Rep. Michael Rulli (OH-6)"
-  },
-  {
-   "t": "NVDA",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 25",
-   "iso": "2026-09-25",
-   "who": "Rep. Daniel Meuser (PA-9)"
-  },
-  {
-   "t": "MU",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 25",
-   "iso": "2026-09-25",
-   "who": "Rep. John J Mr McGuire (VA-5)"
-  },
-  {
-   "t": "MCD",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 25",
-   "iso": "2026-09-25",
-   "who": "Rep. Josh Gottheimer (NJ-5)"
-  },
-  {
-   "t": "APTV",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 25",
-   "iso": "2026-09-25",
-   "who": "Sen. John Boozman (AR)"
-  },
-  {
-   "t": "AVGO",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. John J Mr McGuire (VA-5)"
-  },
-  {
-   "t": "MU",
-   "side": "Buy",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. John J Mr McGuire (VA-5)"
-  },
-  {
-   "t": "BA",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "GS",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "RH",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "BRK.B",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "BIIB",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "BEP",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "CB",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "CSCO",
-   "side": "Sell",
    "size": "$15,001\u2013$50,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "CSCO",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "C",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "GLW",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "DDOG",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
-  },
-  {
-   "t": "FDX",
-   "side": "Sell",
-   "size": "$1,001\u2013$15,000",
-   "date": "Sep 24",
-   "iso": "2026-09-24",
-   "who": "Rep. Maria Elvira Salazar (FL-27)"
+   "date": "Sep 28",
+   "iso": "2026-09-28",
+   "who": "Rep. Gilbert Cisneros (CA-31)"
   }
  ],
  "hot": [
@@ -813,14 +813,14 @@
    "sell": 0
   },
   {
-   "t": "NFLX",
+   "t": "BHE",
    "buyers": 2,
    "sellers": 0,
-   "buy": 16001,
+   "buy": 40501,
    "sell": 0
   },
   {
-   "t": "ACN",
+   "t": "NFLX",
    "buyers": 2,
    "sellers": 0,
    "buy": 16001,
@@ -841,13 +841,6 @@
    "sell": 8000
   },
   {
-   "t": "ALKS",
-   "buyers": 1,
-   "sellers": 0,
-   "buy": 40501,
-   "sell": 0
-  },
-  {
    "t": "MOG.A",
    "buyers": 1,
    "sellers": 0,
@@ -855,21 +848,28 @@
    "sell": 0
   },
   {
+   "t": "GMED",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 40501,
+   "sell": 0
+  },
+  {
+   "t": "GH",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 32500,
+   "sell": 0
+  },
+  {
+   "t": "ON",
+   "buyers": 1,
+   "sellers": 0,
+   "buy": 32500,
+   "sell": 0
+  },
+  {
    "t": "RIG",
-   "buyers": 1,
-   "sellers": 0,
-   "buy": 32500,
-   "sell": 0
-  },
-  {
-   "t": "OLN",
-   "buyers": 1,
-   "sellers": 0,
-   "buy": 32500,
-   "sell": 0
-  },
-  {
-   "t": "PWR",
    "buyers": 1,
    "sellers": 0,
    "buy": 32500,
@@ -894,20 +894,20 @@
    "x": 1.4
   },
   {
-   "t": "LTH",
+   "t": "CECO",
    "x": 1.2
   },
   {
-   "t": "CECO",
-   "x": 1.1
-  },
-  {
    "t": "AIO",
-   "x": 1.0
+   "x": 1.1
   },
   {
    "t": "COHR",
    "x": 1.0
+  },
+  {
+   "t": "AVUV",
+   "x": 0.8
   }
  ],
  "vol_month": [
@@ -925,7 +925,11 @@
   },
   {
    "t": "STLN",
-   "x": 2.0
+   "x": 2.1
+  },
+  {
+   "t": "STRL",
+   "x": 1.8
   },
   {
    "t": "MCHP",
@@ -937,10 +941,6 @@
   },
   {
    "t": "BCPC",
-   "x": 1.6
-  },
-  {
-   "t": "ENTG",
    "x": 1.6
   }
  ],
@@ -981,26 +981,6 @@
    {
     "h": "What Are Wall Street Analysts' Target Price for Abbott Stock?",
     "u": "https://finnhub.io/api/news?id=23be3554aab3d67eec79ab0337878f77abe15a1a97ed199c57ebc34c392c2205",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   }
-  ],
-  "ACN": [
-   {
-    "h": "\u2018Baby Berkshire\u2019 Portfolio: 10 Best AI Stocks to Buy According to Warren Buffett Disciple Tom Gayner",
-    "u": "https://finnhub.io/api/news?id=31c8b5d46e44ee2bbe504c93dd4c4faec7605b1488cceda482116c10845714b2",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Life Science Analytics - Global Strategic Business Report 2026: Capitalize on a US$6.6 Billion Revenue Surge to 2032 as IBM, Oracle, Accenture, SAS, and Cogniza",
-    "u": "https://finnhub.io/api/news?id=a1e0d86b51b97692adfef08cc5daf44a01bca453f0fbf8b828649ca97271f572",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Accenture (ACN) Following WSIB Win Has An Undervalued Narrative To Defend",
-    "u": "https://finnhub.io/api/news?id=eb824b9cb9a0e07a431bcf2fedd7fb511183fb6db4bb40f5e9920eb96242e79d",
     "s": "Yahoo",
     "d": "Nov 10"
    }
@@ -1165,24 +1145,24 @@
     "d": "Nov 10"
    }
   ],
-  "APTV": [
+  "ASML": [
    {
-    "h": "Average Analyst Price Target for Aptiv Decreased by 10.52% to $61.98",
-    "u": "https://finnhub.io/api/news?id=4fcb8f2b39d46f2ba9972a77d25055e7295eecb3eb8060f595a15ebdf218b83d",
-    "s": "Fintel",
+    "h": "AI chip exports to China and oversight bills gain momentum in Congress",
+    "u": "https://finnhub.io/api/news?id=d22f3dcd2a233411c69de41b609370ee222bba65925a7621c0502371e34a46ec",
+    "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "Aptiv PLC (APTV) is Attracting Investor Attention: Here is What You Should Know",
-    "u": "https://finnhub.io/api/news?id=713491f96b363f8e16e565f056fdd1a91085edeeafe5bc63a757a63db49ae3d8",
+    "h": "Intel Can Catch Taiwan Semiconductor on Physics, Not Economics",
+    "u": "https://finnhub.io/api/news?id=6b9d1d5c10ffddc91aad86b10dbf6065f1c60b8fd4e4a1315e731dba0ee11c03",
     "s": "Yahoo",
-    "d": "Nov 9"
+    "d": "Nov 10"
    },
    {
-    "h": "Are Wall Street Analysts Predicting Aptiv Stock Will Climb or Sink?",
-    "u": "https://finnhub.io/api/news?id=8fee585b5144ea99e74231b4d06ed7dc92fb3117d2c5238e8b10bcb431474799",
+    "h": "ETFs Are Net Sellers of ASML (ASML) on Nov. 6",
+    "u": "https://finnhub.io/api/news?id=becf61aa4d5469c1f87effba41c9fe5f56138dbdcf9cd000c680a4c43b48d14d",
     "s": "Yahoo",
-    "d": "Nov 6"
+    "d": "Nov 10"
    }
   ],
   "ATRC": [
@@ -1205,43 +1185,23 @@
     "d": "Nov 5"
    }
   ],
-  "AVGO": [
+  "AVUV": [
    {
-    "h": "Samsung Electronics Stocks Climb 4.74% as Chip Rebound Pushes Shares Near 200,000 Won",
-    "u": "https://finnhub.io/api/news?id=68f368c66b811f5fbe81d5ef65823b5614abb5684d7475b44d451fbc54cb9d75",
-    "s": "Yahoo",
+    "h": "October CPI Report: Hot Inflation Likely Forces A December Hike",
+    "u": "https://finnhub.io/api/news?id=c5ac95603af472a394e8e7ff5e89d04b6d6768aaf080c4cacd920e2280b73138",
+    "s": "SeekingAlpha",
     "d": "Nov 10"
    },
    {
-    "h": "Anthropic's $1.4 trillion IPO could raise $90 billion as Wedbush backs AI hardware outlook",
-    "u": "https://finnhub.io/api/news?id=e5f5c103c49bfb49251059193345447fda79298a1841c9801bdfd6fee3f0f56a",
-    "s": "Yahoo",
+    "h": "The Hot October CPI Report May Mean Much Higher Rates And Lower Stocks",
+    "u": "https://finnhub.io/api/news?id=f2f5df4316e0a9d077c5184c0cb65facdfeb296863c95956d9c052e9f42d4cf6",
+    "s": "SeekingAlpha",
     "d": "Nov 10"
    },
    {
-    "h": "Goldman Sachs calls chip stocks 'oversold.' Here are the names it says to buy.",
-    "u": "https://finnhub.io/api/news?id=4488b30d3a79f26cd93e5bd9269fb02138f93c027aeb5c95b5abbafd036f6cbb",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   }
-  ],
-  "BA": [
-   {
-    "h": "BAE Systems accelerates delivery of advanced LRASM missile sensors",
-    "u": "https://finnhub.io/api/news?id=8f3c7e04a9d1566bcc9ad751f88ba7a61efb4ae3d8b2732c2922552cbf1e642c",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Global Unmanned Aerial Vehicles (UAV) Market Report 2026-2030 | Capitalize on 13.8% CAGR as Boeing, Airbus, DJI and Anduril Accelerate Defense, BVLOS and Drone ",
-    "u": "https://finnhub.io/api/news?id=3c37f702698e4a3c96543bd848b520722656d54b2a92cbebf985175265c4033c",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Global Space Logistics Market Report 2026 | Capitalize on 24.6% CAGR Through 2030 | Featuring Profiles of Boeing, Northrop Grumman, Rocket Lab, Astroscale and D",
-    "u": "https://finnhub.io/api/news?id=39fc9db07f79dcd5a6560fbf8f4257ef3560815bb4f1d7fdbfbbdde2b6ce7af0",
-    "s": "Yahoo",
+    "h": "Is A 50 Basis Point Hike Back On Table?",
+    "u": "https://finnhub.io/api/news?id=07d0c8e771b914d919ee17baac0ba95418a0e202b4fd2e293705f4e3c843e45b",
+    "s": "SeekingAlpha",
     "d": "Nov 10"
    }
   ],
@@ -1279,26 +1239,6 @@
     "d": "Nov 4"
    }
   ],
-  "BEP": [
-   {
-    "h": "Brookfield Renewable Partners LP (BEP) (Q3 2026) Earnings Call Highlights: Record FFO, $3 ...",
-    "u": "https://finnhub.io/api/news?id=ce3153115276f79299b8e103490559d568254f8bb6561e2794371c1083074fb9",
-    "s": "Yahoo",
-    "d": "Nov 7"
-   },
-   {
-    "h": "A $120 Billion Westinghouse Reactor Plan Is Taking Shape. Here\u2019s What History Says Happened the Last Time the U.S. Built Them.",
-    "u": "https://finnhub.io/api/news?id=9a1749f1a1d24f1899d4713d84595d2a6dc00faa44d692e6d169bb53bf6cca68",
-    "s": "Yahoo",
-    "d": "Nov 7"
-   },
-   {
-    "h": "Brookfield Renewable Q3 Results: 3 Key Takeaways for Long-Term Investors",
-    "u": "https://finnhub.io/api/news?id=e500a31d9a06a36fe59ba36ca86d9d86e762a4b3e16cde0224e2380b8bb4606a",
-    "s": "Yahoo",
-    "d": "Nov 6"
-   }
-  ],
   "BHE": [
    {
     "h": "Teledyne Technologies shares are trading higher after the company reported better-than-expected Q1 financial results and raised its FY26 adjusted EPS guidance a",
@@ -1317,26 +1257,6 @@
     "u": "https://finnhub.io/api/news?id=30c94ed5279037f152d1fa660be7e2bafa54e1863ec4711ff0133bb00d3bccc0",
     "s": "Benzinga",
     "d": "Nov 5"
-   }
-  ],
-  "BIIB": [
-   {
-    "h": "Piper Sandler Reiterates Overweight on Biogen, Raises Price Target to $305",
-    "u": "https://finnhub.io/api/news?id=58c44ea47253875af618840f6274b9c72f81aab71e88076be9961e3fd66b8b15",
-    "s": "Benzinga",
-    "d": "Nov 9"
-   },
-   {
-    "h": "ACR 2026: Dapirolizumab Pegol Associated with Greater Treatment Response Rates Versus Placebo in SLE Using Novel Treatment Response Measure",
-    "u": "https://finnhub.io/api/news?id=4926dc4426f23902975cff3fb954e55a4e835512ea0a0f3d11fbb5474679b307",
-    "s": "Yahoo",
-    "d": "Nov 9"
-   },
-   {
-    "h": "UCB And Biogen Report Dapirolizumab Pegol Plus SOC Associated With Higher Response Versus Placebo On Novel TRM-SLE And Greater Sustained Low Disease Activity In",
-    "u": "https://finnhub.io/api/news?id=172f915f229da911a13dfd0283477ee9c1482a93bbbe4ce5c9822f5886d330e2",
-    "s": "Benzinga",
-    "d": "Nov 9"
    }
   ],
   "BRK.B": [
@@ -1359,84 +1279,24 @@
     "d": "Nov 10"
    }
   ],
-  "C": [
+  "CMG": [
    {
-    "h": "FRN Variable Rate Fix",
-    "u": "https://finnhub.io/api/news?id=794bc8a5a9216e390f167b05c72bd504c8c02aa7d8f3e0367c1ad46f74268dbc",
+    "h": "Restaurant Chains Are Hungry for a Comeback. Can This Change Bring Diners Back?",
+    "u": "https://finnhub.io/api/news?id=0d53f81a4aa4b1e850b77f4ba5a07efe31bd863fe7d38cbc3a1774638b55bad4",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "Market Chatter: Goldman, Citigroup Among Banks Committing $270 Million to Stablecoin Venture",
-    "u": "https://finnhub.io/api/news?id=0a0cd1d3949a0f5a3191ae0bbf948620cf20ce96518730e4733ce22b2c95d485",
+    "h": "What Is Next For McDonald's Stock?",
+    "u": "https://finnhub.io/api/news?id=b416aa3bf2265ece14ed4a412406b67d79483c53ddf139bc753d124f9cc12b95",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "Goldman, Citi join global banks in $270 million stablecoin venture - Bloomberg",
-    "u": "https://finnhub.io/api/news?id=dd2ec58d1189b1ffccbe199c7155a8b42d77ef1e0020a2784ca3b92de66bf97b",
+    "h": "Cava vs. Chipotle Mexican Grill: Which Stock Is a Better Buy?",
+    "u": "https://finnhub.io/api/news?id=2bda8314e2dbd43abcd09a1070feb59217bed0c2ee1f2829b8282e62e6293dd6",
     "s": "Yahoo",
     "d": "Nov 10"
-   }
-  ],
-  "CAT": [
-   {
-    "h": "The 'Big Short' Investor Locks in Profits on Overlooked Blue-Chip Stock",
-    "u": "https://finnhub.io/api/news?id=c8daf7dc89eae42458dd04aca4fa624e924daf1150521b7505f0a22d3d850c67",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Stock Market Today: Dow Dips On Hot Inflation Data; Nvidia Falls Again, Anthropic Sets IPO Range (Live Coverage)",
-    "u": "https://finnhub.io/api/news?id=da4b6468f7b07843e1b9de42fc190efda0a049a2abd6c729c74866c400d1cd24",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Caterpillar Is the Quiet Winner in Anthropic\u2019s IPO: a $3.4 Billion Generator Order",
-    "u": "https://finnhub.io/api/news?id=4489e0837d39a0d6aba797a446a9cd9ad31dd89374a6b21a09570a3c94749861",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   }
-  ],
-  "CB": [
-   {
-    "h": "Are Finance Stocks Lagging  Ames National (ATLO) This Year?",
-    "u": "https://finnhub.io/api/news?id=ed0136a057c44441771613ee70abebdfea5291a53eaf3ae0bdaa605728cd4445",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Can CB's Life Insurance Growth Boost Its Wealth Protection Business?",
-    "u": "https://finnhub.io/api/news?id=993957198563e094877f670a403db3448f8b17c04ad2e40de312e36e237c9bf7",
-    "s": "Yahoo",
-    "d": "Nov 9"
-   },
-   {
-    "h": "3 Insurance Dividend Stocks Built to Keep Paying Through Tough Times",
-    "u": "https://finnhub.io/api/news?id=4da2a6d819e4c1f5aa7875fc5b077b8b6a2f0f28410cc6b7dc27ab86f0c71de9",
-    "s": "Yahoo",
-    "d": "Nov 8"
-   }
-  ],
-  "CECO": [
-   {
-    "h": "CECO Environmental Corp. 2026 Q3 - Results - Earnings Call Presentation",
-    "u": "https://finnhub.io/api/news?id=22d1dcbe1729a1e7097979598f939d64f3f1f4ae47d2e0c6107549892c66158b",
-    "s": "SeekingAlpha",
-    "d": "Nov 10"
-   },
-   {
-    "h": "What CECO Environmental (CECO) Said on Its Q3 Earnings Call",
-    "u": "https://finnhub.io/api/news?id=4885e00155cb115607ff03bd74f7fc9be1017da92fe9860f408f8cae34bdfa64",
-    "s": "Yahoo",
-    "d": "Nov 9"
-   },
-   {
-    "h": "After a 50% Drop, This \u2018Picks-and-Shovels\u2019 Stock Shows the AI Trade Has Room to Run",
-    "u": "https://finnhub.io/api/news?id=b33b0e941329590b726ccc0bc8ab3376a44987e53c0843aad68bb0dfa8aef5fb",
-    "s": "Yahoo",
-    "d": "Nov 9"
    }
   ],
   "COHR": [
@@ -1456,6 +1316,26 @@
     "h": "S&P 500 Premarket Losers: GEV, CAT, VRT Fall After Yesterday's Gains",
     "u": "https://finnhub.io/api/news?id=f17d401fae34a1d9ee203ac968a63655755792f5520d52d6ee6c97e343e3b847",
     "s": "ChartMill",
+    "d": "Nov 10"
+   }
+  ],
+  "COST": [
+   {
+    "h": "How These 5 Big-Box Retailers Compete for the Same Shopper",
+    "u": "https://finnhub.io/api/news?id=1dc5b277e3c483f221220f6559713d8e745d8a268185c719857d4a6f6c76c939",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Costco members are paying more for gas and filling up anyway",
+    "u": "https://finnhub.io/api/news?id=550c1ea769f3123ade35f44a4bc9ce2c15ef2d2ff81bceb209db08df76650125",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Walmart's Sam's Club Sees Higher Traffic: Can Momentum Last?",
+    "u": "https://finnhub.io/api/news?id=63d5115afa7f02374fdd779754383e086ceaa1c15d5d4c1b51e1d2de47abfd09",
+    "s": "Yahoo",
     "d": "Nov 10"
    }
   ],
@@ -1579,26 +1459,6 @@
     "d": "Nov 9"
    }
   ],
-  "ENTG": [
-   {
-    "h": "Deutsche Bank Names Top US Chip Stocks Amid Market Volatility",
-    "u": "https://finnhub.io/api/news?id=bc235795ad1100f6fd410a19e22b1a64e85799b78129a004c03ddd6c2e335793",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Allegro MicroSystems, IPG Photonics, Lattice Semiconductor, Entegris, and Broadcom shares skyrocket, what you need to know",
-    "u": "https://finnhub.io/api/news?id=390b8d86aca11af899d7b2c0c0da47e39e66fc8476e2b1af4d9cc64b12ccae87",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Entegris, Inc. (ENTG) Analyst/Investor Day Transcript",
-    "u": "https://finnhub.io/api/news?id=9c2f7af8862882568d14df8f17e7bbbdeae0f599bbc96d65e3c039390bfb1452",
-    "s": "SeekingAlpha",
-    "d": "Nov 10"
-   }
-  ],
   "ESAB": [
    {
     "h": "Evercore ISI Group Maintains In-Line on ESAB, Lowers Price Target to $99",
@@ -1673,23 +1533,43 @@
     "d": "Nov 4"
    }
   ],
-  "GLW": [
+  "GH": [
    {
-    "h": "SANM Q4 Earnings Beat Estimates on AI Growth, Strong Execution",
-    "u": "https://finnhub.io/api/news?id=18cb512cb83d6b7310aab00f206e9c0f08e2e52b0dfd1a744dce13d309d0dd23",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "GLW Stock Rises 32.5% in a Year: Is There Still Room to Grow?",
-    "u": "https://finnhub.io/api/news?id=ad4073369a92c56045af516a24abd980c5b2e4f3fc460d94b80a9b328ee8305e",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Corning to Caterpillar: The AI \u2018Picks and Shovels\u2019 Trade Caves In",
-    "u": "https://finnhub.io/api/news?id=7d02554bf0d9e7c214cda642a596363661389f414a6c02c2a903d313c923ca11",
+    "h": "Piper Sandler Maintains Overweight on Guardant Health, Lowers Price Target to $190",
+    "u": "https://finnhub.io/api/news?id=153e6126468baaf0ba3c54358943082797052a94854ddcd9692cafb51afdcb3e",
     "s": "Benzinga",
+    "d": "Nov 10"
+   },
+   {
+    "h": "GH Q3 2026 deep dive: new product launches and coverage wins drive growth, but market cautious on profitability",
+    "u": "https://finnhub.io/api/news?id=bfa82a855645255930694a758c9e8907a222892abe955fc16b606220d8f1bcde",
+    "s": "Yahoo",
+    "d": "Nov 9"
+   },
+   {
+    "h": "This cancer-testing stock is BTIG\u2019s top pick after another major earnings beat",
+    "u": "https://finnhub.io/api/news?id=131b6172460e44528b8c4d8389daa018acc8b299abb81f1b54a2fba24f1f7ff6",
+    "s": "Yahoo",
+    "d": "Nov 9"
+   }
+  ],
+  "GMED": [
+   {
+    "h": "This Wix.com Analyst Turns Bearish; Here Are Top 5 Downgrades For Tuesday",
+    "u": "https://finnhub.io/api/news?id=bb000e5f0173584cc5bfc3be0409722a78ba6d5006991e993764c791bd6475b2",
+    "s": "Benzinga",
+    "d": "Nov 10"
+   },
+   {
+    "h": "GMED Q3 2026 deep dive: product launch delays and Nevro drag outlook, margin improvement offsets",
+    "u": "https://finnhub.io/api/news?id=eaa7807a4ccbaa12386d97d8cccb1c5f586826014233566cfa7c3f4a7b2cdc9a",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Why Globus Medical (GMED) shares are plunging today",
+    "u": "https://finnhub.io/api/news?id=30e66799a31d4e80c1218084fa3d762517a5657d0861431d5894cce833d5f01a",
+    "s": "Yahoo",
     "d": "Nov 10"
    }
   ],
@@ -1709,26 +1589,6 @@
    {
     "h": "Tesla Bull Predicts Democrats Will \u201cBlock Autonomy,\u201d a Bigger Risk Than Data Centers",
     "u": "https://finnhub.io/api/news?id=b396b16ca8ff8ee97560e0958bbcf645dfba33baef235c2f16e2ab170ee60a37",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   }
-  ],
-  "GS": [
-   {
-    "h": "Market Chatter: Goldman, Citigroup Among Banks Committing $270 Million to Stablecoin Venture",
-    "u": "https://finnhub.io/api/news?id=0a0cd1d3949a0f5a3191ae0bbf948620cf20ce96518730e4733ce22b2c95d485",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Goldman, Citi join global banks in $270 million stablecoin venture - Bloomberg",
-    "u": "https://finnhub.io/api/news?id=dd2ec58d1189b1ffccbe199c7155a8b42d77ef1e0020a2784ca3b92de66bf97b",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "JPMorgan May Sell $2 Billion of Qualtrics Debt at About 85 Cents on the Dollar",
-    "u": "https://finnhub.io/api/news?id=ca542bd6eb2edad78bcd63894bbcb9651b8ab56460dc4b327b3386d1bd739adc",
     "s": "Yahoo",
     "d": "Nov 10"
    }
@@ -1813,6 +1673,26 @@
     "d": "Nov 10"
    }
   ],
+  "HONA": [
+   {
+    "h": "Honeywell Aerospace Inc. (HONA) Presents at Baird 2026 Global Industrial Conference 2026 Transcript",
+    "u": "https://finnhub.io/api/news?id=2e7f47be360cd4b09ce23f0cab26579a32b4e14b2280d5bccdab7e728bbeb29a",
+    "s": "SeekingAlpha",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Kroger,  Northrop Grumman And More 'Fast Money Halftime Report' Picks From August 7",
+    "u": "https://finnhub.io/api/news?id=247d49265b6c15e090085f76758958a164f89aa3efa52374881f5ab062f0deea",
+    "s": "Benzinga",
+    "d": "Nov 9"
+   },
+   {
+    "h": "Honeywell Split Up. Here\u2019s Why Longtime Investors Are Getting Smaller Dividend Checks",
+    "u": "https://finnhub.io/api/news?id=c400d76bb07e956c83285b293fa60fbd6392bc7ce408b5d111b03b998a7241f1",
+    "s": "Yahoo",
+    "d": "Nov 6"
+   }
+  ],
   "IBM": [
    {
     "h": "Life Science Analytics - Global Strategic Business Report 2026: Capitalize on a US$6.6 Billion Revenue Surge to 2032 as IBM, Oracle, Accenture, SAS, and Cogniza",
@@ -1893,6 +1773,26 @@
     "d": "Nov 10"
    }
   ],
+  "LOW": [
+   {
+    "h": "How These 5 Big-Box Retailers Compete for the Same Shopper",
+    "u": "https://finnhub.io/api/news?id=1dc5b277e3c483f221220f6559713d8e745d8a268185c719857d4a6f6c76c939",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Lowe's Becomes Exclusive Home Improvement Partner of Bilt, Making Homeownership More Rewarding Through Bilt Neighborhood OS",
+    "u": "https://finnhub.io/api/news?id=11fc4707cc4f662ce274b20368de065b169266fb3a11f8d08a06006f630d5e07",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Bilt Introduces the Operating System for Neighborhoods, Bilt Neighborhood OS\u2122, Connecting Businesses and Communities to Power Local Commerce",
+    "u": "https://finnhub.io/api/news?id=934f0337f39a2247162885c6fe135cf4bb54af39398b5c3b31991246e2367a1e",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   }
+  ],
   "LRCX": [
    {
     "h": "Deutsche Bank Names Top US Chip Stocks Amid Market Volatility",
@@ -1913,24 +1813,24 @@
     "d": "Nov 10"
    }
   ],
-  "LTH": [
+  "MA": [
    {
-    "h": "Nearly 4,000 Runners Take On the 51st Annual Phoenix Half Marathon & 10K on Sun., Nov. 8",
-    "u": "https://finnhub.io/api/news?id=f4e9027cf781254a5723eb000c1714897ff49a7f9af7191d6505c410efa6d123",
+    "h": "Bill Ackman\u2019s Best Buy Is Already Up 27%. Is It Too Late to Follow Him?",
+    "u": "https://finnhub.io/api/news?id=95e7ff804141240eb78d27d0057db662c58eeaa9701950419cd0010c21867895",
     "s": "Yahoo",
-    "d": "Nov 9"
+    "d": "Nov 10"
    },
    {
-    "h": "Shares of broader consumer discretionary stocks are trading higher. Softer-than-expected November CPI may be lifting broader market sentiment.",
-    "u": "https://finnhub.io/api/news?id=f68c479dff72ecb4247797b006ce0a6337e44b80cf34376fb96ddef177db0d73",
-    "s": "Benzinga",
-    "d": "Nov 4"
+    "h": "Mastercard CEO Reveals His Biggest Cybersecurity Concern",
+    "u": "https://finnhub.io/api/news?id=5c790af565b9c731383c0ec61a87291aa9241b73dc4ac5af1147719ca414aa85",
+    "s": "Yahoo",
+    "d": "Nov 10"
    },
    {
-    "h": "Life Time Is the Definitive Destination for Whole-Person Health",
-    "u": "https://finnhub.io/api/news?id=61888f41cabbecd4ab1b2cc6d27ae0d932d88df81b5fcda8cd1e13c40ecc2f4a",
+    "h": "The Dates That Matter Most For Visa Stock",
+    "u": "https://finnhub.io/api/news?id=536ac43cc6e7adfd3560af0d150fbad1814a97d5d59a039a2cb1837b82c02003",
     "s": "Yahoo",
-    "d": "Nov 4"
+    "d": "Nov 10"
    }
   ],
   "MCD": [
@@ -2053,6 +1953,26 @@
     "d": "Nov 10"
    }
   ],
+  "MTSI": [
+   {
+    "h": "Disney, Gardner Denver, Intel: Fast Money Picks For October 3",
+    "u": "https://finnhub.io/api/news?id=2d587481b82db68d6ee222b43fd76ec85b4e37bf6e4df0c1ad1a4c5ba71fd9b0",
+    "s": "Benzinga",
+    "d": "Nov 9"
+   },
+   {
+    "h": "MTSI Q3 CY2026 deep dive: robust growth met by market skepticism amid supply chain and end-market shifts",
+    "u": "https://finnhub.io/api/news?id=2d8d497e62321c332a8bb4fe399424baafb7d7bd610484b8158f874e0761feaf",
+    "s": "Yahoo",
+    "d": "Nov 9"
+   },
+   {
+    "h": "3 US Chip Stocks for AI Exposure With Lower China Risk",
+    "u": "https://finnhub.io/api/news?id=1b50dd17155f7c6e552825e91f84535562cbc1e96473b43a3b00a5b8a9e18ae7",
+    "s": "Yahoo",
+    "d": "Nov 9"
+   }
+  ],
   "MU": [
    {
     "h": "Samsung Electronics Stocks Climb 4.74% as Chip Rebound Pushes Shares Near 200,000 Won",
@@ -2133,24 +2053,24 @@
     "d": "Nov 10"
    }
   ],
-  "OLN": [
+  "ON": [
    {
-    "h": "Innospec's Q3 Earnings Beat Estimates on Chemicals Strength",
-    "u": "https://finnhub.io/api/news?id=63abefc34f749cedec3d28938e06fc67977b62a46029fd55a47055fd6ea8cbab",
+    "h": "Why Is Monolithic Power Systems Stock Going Up?",
+    "u": "https://finnhub.io/api/news?id=adb310ab20464ce525a49ae6ad92f1b7696133f1334d438c3b96336749627871",
     "s": "Yahoo",
     "d": "Nov 10"
    },
    {
-    "h": "Huntsman: Recovery Continues, Leaving Valuation Very Compelling",
-    "u": "https://finnhub.io/api/news?id=646ee898b438a7dcd297acf0ecc0f7b50f797534e970c39e6f7064653a37e86e",
-    "s": "SeekingAlpha",
-    "d": "Nov 9"
+    "h": "What Did Texas Instruments Say Before Its Stock Took Off?",
+    "u": "https://finnhub.io/api/news?id=665846b84e5df5a8185aa24675fbe37dfb0400376481f9e02f4be13c8b987026",
+    "s": "Yahoo",
+    "d": "Nov 10"
    },
    {
-    "h": "Olin (OLN) Following Weak Results And A Credit Reset, Is The Stock A Bargain",
-    "u": "https://finnhub.io/api/news?id=6e2f2ad963109e3117e466783a9a01d288a1e44baf78df7733cf981039cee4ae",
+    "h": "onsemi's EliteSiC M4 Pushes Power Density Higher\u00a0as Energy Demands Grow",
+    "u": "https://finnhub.io/api/news?id=68e23e1c054398ce6a9bff52c2edac4c57acab84650ea89141a7e3b766835fa4",
     "s": "Yahoo",
-    "d": "Nov 7"
+    "d": "Nov 10"
    }
   ],
   "OXM": [
@@ -2293,22 +2213,22 @@
     "d": "Nov 6"
    }
   ],
-  "RH": [
+  "REZI": [
    {
-    "h": "Citigroup Maintains Neutral on RH, Lowers Price Target to $155",
-    "u": "https://finnhub.io/api/news?id=ef3112931d4097eb8c0fd38fb0ad5102d7003c958c4d3e6fe1b8c46179008d36",
+    "h": "Petrobras, TransDigm On Deck Tuesday As Oil Profits, Aerospace Demand Face Test",
+    "u": "https://finnhub.io/api/news?id=83be46baf195f23053f60addfd8c8cb6c086b0a2140f23e1628e7d44af6b8b23",
     "s": "Benzinga",
-    "d": "Nov 6"
+    "d": "Nov 9"
    },
    {
-    "h": "RH (RH) Declines More Than Market: Some Information for Investors",
-    "u": "https://finnhub.io/api/news?id=56cd494909372ab224fb06c23b98ec460978acf3e4504594c9c12c3d177bb42b",
+    "h": "Alarm.com Holdings (ALRM) Surpasses Q3 Earnings and Revenue Estimates",
+    "u": "https://finnhub.io/api/news?id=11ec1371b196dd6ce39af788c6e95de36c97ba0d6b20c3d2cf26ad3602f807d1",
     "s": "Yahoo",
     "d": "Nov 5"
    },
    {
-    "h": "Bob\u2019s Discount Furniture Sees 3Q Revenue & Income Growth",
-    "u": "https://finnhub.io/api/news?id=5a9aa0eead910f44124087a64b3062c3a17d03e92fe1ffb14a39e9f4758a6ee2",
+    "h": "Learn Why The Bull Case For Resideo Technologies (REZI) Could Change Following Apple HomeView Update",
+    "u": "https://finnhub.io/api/news?id=3c4dbcdf2a59f1ffc7a49fccad9550350b060bdb84d02f7bc67a3cb1456eabfb",
     "s": "Yahoo",
     "d": "Nov 5"
    }
@@ -2351,6 +2271,26 @@
     "u": "https://finnhub.io/api/news?id=ead74b35e1c6d95f5c6b2781b42408d3449b4be8672c3de812ba27ba1b19f253",
     "s": "Fintel",
     "d": "Nov 7"
+   }
+  ],
+  "SBUX": [
+   {
+    "h": "3 Dividend Stocks to Buy in November and Hold Forever",
+    "u": "https://finnhub.io/api/news?id=8211c19fa1bd48144de361589f0a4393cf10fd60bc9fb5cadfe55a43120ba94f",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "What Is Next For McDonald's Stock?",
+    "u": "https://finnhub.io/api/news?id=b416aa3bf2265ece14ed4a412406b67d79483c53ddf139bc753d124f9cc12b95",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "McDonald\u2019s new drinks take aim at your Starbucks order",
+    "u": "https://finnhub.io/api/news?id=d81f4c8d60ca3365dd28e3423c06248eb5609e14f79074c912f682e50a9ae851",
+    "s": "Yahoo",
+    "d": "Nov 10"
    }
   ],
   "SMTC": [
@@ -2431,6 +2371,46 @@
     "u": "https://finnhub.io/api/news?id=aa94b8a8ac25e89399457fe1e267c0b0e1fa7b368b0fc9cb3bcc82975e82e49b",
     "s": "ChartMill",
     "d": "Nov 6"
+   }
+  ],
+  "STRL": [
+   {
+    "h": "Sterling Infrastructure, Inc. (STRL) Is Riding the AI Data Center Boom: Can Growth Continue?",
+    "u": "https://finnhub.io/api/news?id=ebd4f89941d2c5e3df90fe5194ebd4d90972bbc7a15a56c55909950c44487e2e",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "JP Morgan Initiates Coverage On Sterling Infrastructure with Overweight Rating, Announces Price Target of $585",
+    "u": "https://finnhub.io/api/news?id=34e13a83826df4d20c3c4afab83dbec08468eb0628061c7926f938241a45d89c",
+    "s": "Benzinga",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Alphabet Almost Sets a Record No One Wants",
+    "u": "https://finnhub.io/api/news?id=890603e6b22de4f2f34aee7c7d0c06ef2c8ad50a850095bd534e2c69116f9f28",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   }
+  ],
+  "STX": [
+   {
+    "h": "Seagate (STX) Unveiled FireCuda Forge With Its New Alkemi Storage Platform",
+    "u": "https://finnhub.io/api/news?id=9f6468fbcbebeba66d7a9b6685fa26ddfbe58769aead51b8b90b52f19a86f6a4",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Kratos And Seagate Just Announced A Partnership \u2013 A Look At The Key Highlights",
+    "u": "https://finnhub.io/api/news?id=966d94f3e7190a287cf9cacb0fa573041ec2dd64b551f80b172f7da27429cdb0",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Micron Cratered Losing 30% in 1 Month: 240% Gains Lie Ahead According to This Wall Street Pro",
+    "u": "https://finnhub.io/api/news?id=a3448b85571083b81e0a971adbb5b0567f1dce57fa1d6a0f46484ecdaa93259d",
+    "s": "Yahoo",
+    "d": "Nov 10"
    }
   ],
   "SYK": [
@@ -2601,6 +2581,26 @@
     "d": "Nov 10"
    }
   ],
+  "TXN": [
+   {
+    "h": "\u2018Baby Berkshire\u2019 Portfolio: 5 Best AI Stocks to Buy According to Warren Buffett Disciple Tom Gayner",
+    "u": "https://finnhub.io/api/news?id=884f87f4cab048c27e0d958cd4df4d7d5f666642989d58d4dc8349f6a90d8ece",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Why Is Monolithic Power Systems Stock Going Up?",
+    "u": "https://finnhub.io/api/news?id=adb310ab20464ce525a49ae6ad92f1b7696133f1334d438c3b96336749627871",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "What Is The True Hidden Price Of Applied Materials Stock?",
+    "u": "https://finnhub.io/api/news?id=8722942632674d7a80d3233878344eea6dab2d20b9ae6d3b54911397cd857e0d",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   }
+  ],
   "V": [
    {
     "h": "Bill Ackman\u2019s Best Buy Is Already Up 27%. Is It Too Late to Follow Him?",
@@ -2639,6 +2639,26 @@
     "u": "https://finnhub.io/api/news?id=4b3cd63f1affe5eb3c579515a0526e94557030605ecf4392c5a149bf4c9575cb",
     "s": "Yahoo",
     "d": "Nov 9"
+   }
+  ],
+  "VZ": [
+   {
+    "h": "Democrats Take Congress: 4 Dividend Stocks From Oil to Telecom Worth Buying",
+    "u": "https://finnhub.io/api/news?id=2533aa74d31eba34e39a367139411b7162fcf8d887c637bea96a962d84a82adc",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "SpaceX to Build $24B TX Data Center & Gas Plant: Stock Worth a Bet?",
+    "u": "https://finnhub.io/api/news?id=5a5508363faa7c4959df0946e71fe08d9b81341b4523de0e0f5e518abc832a88",
+    "s": "Yahoo",
+    "d": "Nov 10"
+   },
+   {
+    "h": "Verizon Business, Thames Freeport complete one of Europe\u2019s largest Private 5G implementations",
+    "u": "https://finnhub.io/api/news?id=f0fabce55a1ce1ca0504fa95e71d0fcc0fe3280c270d4a6c563e4a86699cd26f",
+    "s": "Yahoo",
+    "d": "Nov 10"
    }
   ],
   "WDC": [
@@ -2803,12 +2823,6 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "ACN": {
-   "name": "Accenture plc",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
   "ADI": {
    "name": "Analog Devices, Inc.",
    "does": "Details unavailable.",
@@ -2863,8 +2877,8 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "APTV": {
-   "name": "Aptiv PLC",
+  "ASML": {
+   "name": "ASML Holding N.V. - New York Re",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -2875,14 +2889,8 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "AVGO": {
-   "name": "Broadcom Inc.",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
-  "BA": {
-   "name": "Boeing Company (The)",
+  "AVUV": {
+   "name": "Avantis U.S. Small Cap Value ET",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -2899,20 +2907,8 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "BEP": {
-   "name": "Brookfield Renewable Partners L",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
   "BHE": {
    "name": "Benchmark Electronics, Inc.",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
-  "BIIB": {
-   "name": "Biogen Inc.",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -2923,32 +2919,26 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "C": {
-   "name": "Citigroup, Inc.",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
-  "CAT": {
-   "name": "Caterpillar, Inc.",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
-  "CB": {
-   "name": "Chubb Limited",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
   "CECO": {
    "name": "CECO Environmental Corp.",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
+  "CMG": {
+   "name": "Chipotle Mexican Grill, Inc.",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
   "COHR": {
    "name": "Coherent Corp.",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "COST": {
+   "name": "Costco Wholesale Corporation",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -2989,12 +2979,6 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "ENTG": {
-   "name": "Entegris, Inc.",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
   "ESAB": {
    "name": "ESAB Corporation",
    "does": "Details unavailable.",
@@ -3019,20 +3003,20 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "GLW": {
-   "name": "Corning Incorporated",
+  "GH": {
+   "name": "Guardant Health, Inc.",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "GMED": {
+   "name": "Globus Medical, Inc.",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
   "GOOG": {
    "name": "Alphabet Inc.",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
-  "GS": {
-   "name": "Goldman Sachs Group, Inc. (The)",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -3061,6 +3045,12 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
+  "HONA": {
+   "name": "Honeywell Aerospace Inc.",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
   "IBM": {
    "name": "International Business Machines",
    "does": "Details unavailable.",
@@ -3085,14 +3075,20 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
+  "LOW": {
+   "name": "Lowe's Companies, Inc.",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
   "LRCX": {
    "name": "Lam Research Corporation",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "LTH": {
-   "name": "Life Time Group Holdings, Inc.",
+  "MA": {
+   "name": "Mastercard Incorporated",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -3133,6 +3129,12 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
+  "MTSI": {
+   "name": "MACOM Technology Solutions Hold",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
   "MU": {
    "name": "Micron Technology, Inc.",
    "does": "Details unavailable.",
@@ -3157,8 +3159,8 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "OLN": {
-   "name": "Olin Corporation",
+  "ON": {
+   "name": "ON Semiconductor Corporation",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -3205,8 +3207,8 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
-  "RH": {
-   "name": "Rh",
+  "REZI": {
+   "name": "Resideo Technologies, Inc.",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -3219,6 +3221,12 @@
   },
   "RPM": {
    "name": "RPM International Inc.",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "SBUX": {
+   "name": "Starbucks Corporation",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -3243,6 +3251,18 @@
   },
   "STLN": {
    "name": "Starling Oncology, Inc.",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "STRL": {
+   "name": "Sterling Infrastructure, Inc.",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "STX": {
+   "name": "Seagate Technology Holdings PLC",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
@@ -3301,6 +3321,12 @@
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
   },
+  "TXN": {
+   "name": "Texas Instruments Incorporated",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
   "V": {
    "name": "Visa Inc.",
    "does": "Details unavailable.",
@@ -3309,6 +3335,12 @@
   },
   "VSAT": {
    "name": "ViaSat, Inc.",
+   "does": "Details unavailable.",
+   "why": "Heavy trading can follow news or earnings reports.",
+   "weigh": "Single stocks are riskier than funds that hold many."
+  },
+  "VZ": {
+   "name": "Verizon Communications Inc.",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
