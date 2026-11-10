@@ -894,6 +894,10 @@
    "x": 0.9
   },
   {
+   "t": "FSLR",
+   "x": 0.8
+  },
+  {
    "t": "AVUV",
    "x": 0.7
   },
@@ -902,12 +906,8 @@
    "x": 0.7
   },
   {
-   "t": "FSLR",
+   "t": "MU",
    "x": 0.7
-  },
-  {
-   "t": "COIN",
-   "x": 0.6
   }
  ],
  "vol_month": [
@@ -1156,26 +1156,6 @@
     "h": "S&P 500 Premarket Losers: GEV, CAT, VRT Fall After Yesterday's Gains",
     "u": "https://finnhub.io/api/news?id=f17d401fae34a1d9ee203ac968a63655755792f5520d52d6ee6c97e343e3b847",
     "s": "ChartMill",
-    "d": "Nov 10"
-   }
-  ],
-  "COIN": [
-   {
-    "h": "Coinbase Falls 4%, Robinhood Slides 3% as Hot Inflation Data Drags Bitcoin Lower; Webull Declines 2%",
-    "u": "https://finnhub.io/api/news?id=5ec16cb199e7e03b22c606d4b0a77d8c579f7f692dbf4298d01c80e476e89545",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Coinbase, Kalshi, and Kraken are lawyering up. Here's why.",
-    "u": "https://finnhub.io/api/news?id=7238fc5325b6859f387c183a0de9269dd608454c3340de1af5598eeb3fe668dc",
-    "s": "Yahoo",
-    "d": "Nov 10"
-   },
-   {
-    "h": "Sen. Warren targets Trump family crypto firms, and miner MARA sold BTC for $1.1 B",
-    "u": "https://finnhub.io/api/news?id=19a2472c0de081ce23644bd40526ee1647652d9cbc507a22dd5b57dcf40e17b0",
-    "s": "Yahoo",
     "d": "Nov 10"
    }
   ],
@@ -2145,12 +2125,6 @@
   },
   "COHR": {
    "name": "Coherent Corp.",
-   "does": "Details unavailable.",
-   "why": "Heavy trading can follow news or earnings reports.",
-   "weigh": "Single stocks are riskier than funds that hold many."
-  },
-  "COIN": {
-   "name": "Coinbase Global, Inc.",
    "does": "Details unavailable.",
    "why": "Heavy trading can follow news or earnings reports.",
    "weigh": "Single stocks are riskier than funds that hold many."
